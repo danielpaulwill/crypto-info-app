@@ -2,7 +2,7 @@ import react from "react";
 
 function CryptoInfo() {
   return (
-    <div>
+    <div className="outline">
       <h1>CryptoInfo</h1>
     </div>
   )

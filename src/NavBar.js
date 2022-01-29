@@ -2,7 +2,7 @@ import react from "react";
 
 function NavBar() {
   return (
-    <div>
+    <div className="outline">
       <h1>NavBar</h1>
     </div>
   )
