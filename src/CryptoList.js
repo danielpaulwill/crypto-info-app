@@ -15,10 +15,8 @@ function CryptoList() {
   
   function timer() {
     if (countDown < 1) {
-      console.log("activated")
       setCountDown(10)
     } else {
-      console.log("oh boy")
       setCountDown(countDown => countDown - 1)
     }
   };
