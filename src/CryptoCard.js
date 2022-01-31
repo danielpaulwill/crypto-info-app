@@ -1,13 +1,13 @@
-import react from "react";
+import react, { useEffect } from "react";
+import { useState } from "react/cjs/react.development";
 import CryptoInfo from "./CryptoInfo";
 
-function CryptoCard({ cryptoCoin }) {
+function CryptoCard({ cryptoCoin, color }) {
 
-    const changeStatus = Math.sign(cryptoCoin.market_data.price_change_24h_in_currency.usd)
+  const changeStatus = Math.sign(cryptoCoin.market_data.price_change_24h_in_currency.usd)
 
   return (
-    <div id="container">
-      <div id="inner">
+      <div className={color}>
         <img className="image" src={cryptoCoin.image.thumb}></img>
         <p className="child"><b>{cryptoCoin.name}</b></p>
         <p className="ticker">{cryptoCoin.symbol.toUpperCase()}</p>
@@ -20,7 +20,6 @@ function CryptoCard({ cryptoCoin }) {
         <p className="child">${cryptoCoin.market_data.current_price.usd}</p>
         {/* <CryptoInfo /> */}
       </div>
-    </div>
   )
 };
 

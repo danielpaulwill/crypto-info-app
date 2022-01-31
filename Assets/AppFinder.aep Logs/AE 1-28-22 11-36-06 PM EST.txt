@@ -1,0 +1,1 @@
+  1/28/22 11:36:06 PM EST: Starting composition “Comp 1”.  Output To: /Users/daniel/Desktop/Code/crypto-info-app/Assets/AppFinder.mov    1/28/22 11:36:08 PM EST: Finished composition “Comp 1”.  Total Time Elapsed: 2 SecondsLog closed on 1/28/22 at 11:36:08 PM EST

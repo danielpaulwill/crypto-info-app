@@ -2,33 +2,66 @@
   padding-left: 50px;
 }
 
-#header{
-  float: center;
-  background-color: red;
+#logo {
+  height: 80px;
+  padding-left: 40px;
+  position: absolute;
 }
 
-.outline {
-  background-color: #A3CFFF;
+#title {
+  padding-top: 60px;
+  position: absolute;
+}
+
+#header{
+  float: center;
+  width: 500px;
+  height: 125px;
+  padding-left: 260px;
+  background-color: #F2F2F2;
+}
+
+#navBar {
+  background-color: #99AFF2;
+  width: 760px;
+  height: 55px;
   border: solid;
+  border-color: #A6A6A6;
+  border-width: thin;
+}
+
+.labelBar {
+  background-color: #C4D4F2;
+  width: 760px;
+  height: 55px;
+  border: solid;
+  border-color: #A6A6A6;
+  border-width: thin;
 }
 
 #container {
   background-color: white;
-  overflow: hidden;
-  width: auto;
 }
 
-#inner {
+.card1 {
   overflow: hidden;
-  width: 2000px;
-  border-color: black;
+  background-color: #F2F2F2;
+}
+
+.card2 {
+  overflow: hidden;
+  background-color: 000;
+}
+
+#cardContainer {
+  width: 760px;
   border: solid;
-  /* background-color: red; */
+  border-color: #A6A6A6;
+  border-width: thin;
 }
 
 .child {
   float: left;
-  background-color: white;
   width: 120px;
   padding-right: 25px;
   height: 20px;
@@ -36,7 +69,6 @@
 
 .image {
   float: left;
-  background-color: white;
   width: auto;
   padding-right: 20px;
   padding-left: 20px;
@@ -45,7 +77,6 @@
 
 .first {
   float: left;
-  background-color: white;
   width: 120px;
   padding-right: 25px;
   padding-left: 65px;
@@ -54,33 +85,32 @@
 
 .change {
   float: left;
-  background-color: white;
   width: 200px;
   padding-right: 25px;
-  /* height: 20px; */
+}
+
+.current {
+  float: left;
+  width: 200px;
+  padding-left: 25px;
 }
 
 .negative {
   float: left;
-  background-color: white;
   width: 200px;
   padding-right: 25px;
-  /* height: 20px; */
   color: red;
 }
 
 .positive {
   float: left;
-  background-color: white;
   width: 200px;
   padding-right: 25px;
-  /* height: 20px; */
   color: green;
 }
 
 .ticker {
   float: left;
-  background-color: white;
   width: 55px;
   padding-right: 25px;
   height: 20px;
@@ -88,7 +118,6 @@
 
 .arrowUp {
   float: left;
-  background-color: white;
   width: 1px;
   padding-right: 25px;
   height: 20px;
@@ -97,9 +126,52 @@
 
 .arrowDown {
   float: left;
-  background-color: white;
   width: 1px;
   padding-right: 25px;
   height: 20px;
   color: red;
+}
+
+.navLink {
+  float: left;
+  width: 100px;
+  padding: 12px;
+  margin: 5px 10px;
+  color: #F2F2F2;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+.active {
+  float: left;
+  width: 100px;
+  padding: 12px;
+  margin: 5px 10px;
+  color: #0D0D0D;
+  background-color: #C4D4F2;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+.space {
+  float: left;
+  width: 250px;
+}
+
+.form {
+  background-color: red;
+  padding-left: 50px;
+  padding: 15px 20px;
+}
+
+#formName {
+  float: left;
+  width: 150px;
+  height: 20px;
+}
+
+#formComment {
+  float: left;
+  width: 250px;
+  height: 20px;
 }
