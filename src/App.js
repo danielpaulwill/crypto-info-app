@@ -17,10 +17,9 @@ function App() {
     }
   };
 
-  const updateCountDown = setTimeout(() => timer(), 1000)
-
+  
   useEffect(() => {
-    updateCountDown
+    const updateCountDown = setTimeout(() => timer(), 1000)
   }, [countDown])
 
   return (

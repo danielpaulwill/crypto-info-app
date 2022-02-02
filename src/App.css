@@ -159,19 +159,21 @@
 }
 
 .form {
-  background-color: red;
+  /* background-color: red; */
   padding-left: 50px;
   padding: 15px 20px;
 }
 
 #formName {
-  float: left;
+  display: inline-block;
+  /* float: left; */
   width: 150px;
   height: 20px;
 }
 
 #formComment {
-  float: left;
+  /* float: left; */
+  display: inline-block;
   width: 250px;
   height: 20px;
 }
