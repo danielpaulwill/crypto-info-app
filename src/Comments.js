@@ -36,7 +36,7 @@ function Comments() {
       <h3>{post.name}</h3>
       <p>{post.time}</p>
       <p>{post.comment}</p>
-      <button onClick={handleDelete(post)}>X delete X</button>
+      <button onClick={e => handleDelete(post)}>X delete X</button>
     </div>
   ))
   
@@ -59,15 +59,18 @@ function Comments() {
       setFormCommentData("")
     }
 
-    function handleDelete(id) {
-      fetch(`http://localhost:3000/comments/${id}`, {
+    function handleDelete(post) {
+      fetch(`http://localhost:3000/comments/${post.id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
         }
       })
       .then(res => res.json())
-      .then(data => console.log(data))
+      .then(console.log("Deleted!"))
+
+      let newCommentData = commentData.filter(comment => comment.id !== post.id)
+      setCommentData(newCommentData)
     }
 
   return (

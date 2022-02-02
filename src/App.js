@@ -4,7 +4,6 @@ import './App.css';
 import CryptoList from './CryptoList';
 import Header from './Header';
 import NavBar from './NavBar';
-// import SearchBar from './SearchBar';
 import Comments from './Comments';
 
 function App() {
@@ -18,11 +17,11 @@ function App() {
     }
   };
 
-  // const updateCountDown = setTimeout(() => timer(), 1000)
+  const updateCountDown = setTimeout(() => timer(), 1000)
 
-  // useEffect(() => {
-  //   updateCountDown
-  // }, [countDown])
+  useEffect(() => {
+    updateCountDown
+  }, [countDown])
 
   return (
     <div id='app'>
