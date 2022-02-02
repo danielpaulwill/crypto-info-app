@@ -1,34 +1,16 @@
 {
   "comments": [
     {
-      "id": 1,
       "name": "Emily Ayers",
-      "time": "Saturday, January 29 - 11:36 PM",
-      "comment": "I really like all the coins!"
+      "time": "Tuesday, February 1 - 10:31 PM",
+      "comment": "I love Bitcoin!",
+      "id": 1
     },
     {
-      "id": 2,
       "name": "Waniel Dilliams",
-      "time": "Sunday January 30 - 10:45 AM",
-      "comment": "Bitcoin is da Bestcoin"
-    },
-    {
-      "name": "Test",
-      "time": "Tuesday, February 1 - 10:16 PM",
-      "comment": "I love tests!",
-      "id": 3
-    },
-    {
-      "name": "Test2",
-      "time": "Tuesday, February 1 - 10:18 PM",
-      "comment": "I also love them!",
-      "id": 4
-    },
-    {
-      "name": "Test 3",
-      "time": "Tuesday, February 1 - 10:21 PM",
-      "comment": "Enough already!",
-      "id": 5
+      "time": "Tuesday, February 1 - 10:31 PM",
+      "comment": "I love all the crypto!",
+      "id": 2
     }
   ]
 }

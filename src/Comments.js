@@ -36,7 +36,7 @@ function Comments() {
       <h3>{post.name}</h3>
       <p>{post.time}</p>
       <p>{post.comment}</p>
-      <button onClick={handleDelete(post.id)}>X delete X</button>
+      <button onClick={handleDelete(post)}>X delete X</button>
     </div>
   ))
   
@@ -61,8 +61,11 @@ function Comments() {
 
     function handleDelete(id) {
       fetch(`http://localhost:3000/comments/${id}`, {
-        method: 'DELETE'
-      }),
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      })
       .then(res => res.json())
       .then(data => console.log(data))
     }
