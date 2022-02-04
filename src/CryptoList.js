@@ -19,7 +19,11 @@ function CryptoList() {
   const alternatingColor = ['card1', 'card2'];
   
   const cryptoCards = cryptoData.map((cryptoCoin, index) => (
-    <CryptoCard key={cryptoCoin.id} cryptoCoin={cryptoCoin} color={alternatingColor[index % alternatingColor.length]} />
+    <CryptoCard 
+      key={cryptoCoin.id} 
+      cryptoCoin={cryptoCoin} 
+      color={alternatingColor[index % alternatingColor.length]} 
+    />
   ));
 
   return (
@@ -33,7 +37,7 @@ function CryptoList() {
          </div>
         {/* <CryptoInfo /> */}
       </div>
-      <div id="cardContainer">
+      <div>
       {cryptoCards}
       </div>
     </div>
