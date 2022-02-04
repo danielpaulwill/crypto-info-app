@@ -5,34 +5,37 @@ import CryptoList from './CryptoList';
 import Header from './Header';
 import NavBar from './NavBar';
 import Comments from './Comments';
+import CryptoInfo from './CryptoInfo';
 
 function App() {
-  const [countDown, setCountDown] = useState(60)
-  
-  function timer() {
-    if (countDown < 2) {
-      setCountDown(60)
-    } else {
-      setCountDown(countDown => countDown - 1)
-    }
-  };
+  const [cryptoData, setCryptoData] = useState([])
 
+  function initFetch() {
+    fetch('https://api.coingecko.com/api/v3/coins')
+    .then(res =>res.json())
+    .then(data => setCryptoData(data))
+  }
   
   useEffect(() => {
-    const updateCountDown = setTimeout(() => timer(), 1000)
-  }, [countDown])
+    initFetch()
+    setInterval(initFetch, [60000])
+  }, [])
+
 
   return (
     <div id='app'>
         <Header />
-        <NavBar countDown={countDown} />
+        <NavBar />
       {/* <SearchBar /> */}
       <Switch>
         <Route exact path="/comments">
-          <Comments /*updateCountDown={updateCountDown}*/ />
+          <Comments />
         </Route>
         <Route exact path="/">
-          <CryptoList />
+          <CryptoList cryptoData={cryptoData} />
+        </Route>
+        <Route exact path="/info">
+          <CryptoInfo cryptoData={cryptoData}/>
         </Route>
       </Switch>
     </div>

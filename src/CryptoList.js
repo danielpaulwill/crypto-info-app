@@ -1,20 +1,7 @@
 import react, { useEffect, useState } from "react";
 import CryptoCard from "./CryptoCard"
 
-function CryptoList() {
-  const [cryptoData, setCryptoData] = useState([])
-
-  
-  function initFetch() {
-    fetch('https://api.coingecko.com/api/v3/coins')
-    .then(res =>res.json())
-    .then(data => setCryptoData(data))
-  }
-  
-  useEffect(() => {
-    initFetch()
-    setInterval(initFetch, [60000])
-  }, [])
+function CryptoList({ cryptoData }) {
 
   const alternatingColor = ['card1', 'card2'];
   

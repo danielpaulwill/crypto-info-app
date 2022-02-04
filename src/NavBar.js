@@ -1,7 +1,21 @@
-import react from "react";
+import react, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom"
 
-function NavBar({ countDown }) {
+function NavBar() {
+  const [countDown, setCountDown] = useState(60)
+
+  function timer() {
+    if (countDown < 2) {
+      setCountDown(60)
+    } else {
+      setCountDown(countDown => countDown - 1)
+    }
+  };
+
+  useEffect(() => {
+    const updateCountDown = setTimeout(() => timer(), 1000)
+  }, [countDown])
+
   return (
     <div id="navBar">
         <NavLink
@@ -19,6 +33,14 @@ function NavBar({ countDown }) {
           activeClassName="active"
         >
           Comments
+        </NavLink>
+        <NavLink
+          to="/info"
+          exact
+          className="navLink"
+          activeClassName="active"
+        >
+          Info
         </NavLink>
 
       {/* <h3 className="first">Crypto List</h3> */}

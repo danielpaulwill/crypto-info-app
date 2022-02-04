@@ -1,20 +1,12 @@
-import react, { useEffect } from "react";
-import { useState } from "react/cjs/react.development";
+import react, { useEffect, useState } from "react";
 import CryptoInfo from "./CryptoInfo";
 
 function CryptoCard({ cryptoCoin, color }) {
 
   const changeStatus = Math.sign(cryptoCoin.market_data.price_change_24h_in_currency.usd)
 
-  function handleMouseOver(cryptoCoin) {
-    // console.log(cryptoCoin.last_updated)
-    <CryptoInfo cryptoCoin={cryptoCoin} />
-  }
-
-
-
   return (
-      <div className={color} onClick={e => handleMouseOver(cryptoCoin)}>
+      <div className={color}>
         <img className="image" src={cryptoCoin.image.thumb}></img>
         <p className="child"><b>{cryptoCoin.name}</b></p>
         <p className="ticker">{cryptoCoin.symbol.toUpperCase()}</p>
@@ -25,9 +17,6 @@ function CryptoCard({ cryptoCoin, color }) {
           <br></br>({cryptoCoin.market_data.price_change_percentage_24h_in_currency.usd}%)
         </p>
         <p className="child">${cryptoCoin.market_data.current_price.usd}</p>
-        <div className={color}>
-          <CryptoInfo cryptoCoin={cryptoCoin} />
-        </div>
       </div>
   )
 };
