@@ -1,9 +1,10 @@
 import react from "react";
 
-function CryptoInfo() {
+function CryptoInfo({ cryptoCoin }) {
   return (
-    <div className="outline">
+    <div>
       <h1>CryptoInfo</h1>
+      <p>{cryptoCoin.last_updated}</p>
     </div>
   )
 };

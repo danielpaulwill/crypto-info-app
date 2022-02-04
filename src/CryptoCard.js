@@ -7,8 +7,11 @@ function CryptoCard({ cryptoCoin, color }) {
   const changeStatus = Math.sign(cryptoCoin.market_data.price_change_24h_in_currency.usd)
 
   function handleMouseOver(cryptoCoin) {
-    console.log(cryptoCoin)
+    // console.log(cryptoCoin.last_updated)
+    <CryptoInfo cryptoCoin={cryptoCoin} />
   }
+
+
 
   return (
       <div className={color} onClick={e => handleMouseOver(cryptoCoin)}>
@@ -22,8 +25,8 @@ function CryptoCard({ cryptoCoin, color }) {
           <br></br>({cryptoCoin.market_data.price_change_percentage_24h_in_currency.usd}%)
         </p>
         <p className="child">${cryptoCoin.market_data.current_price.usd}</p>
-        <div>
-          {/* <CryptoInfo /> */}
+        <div className={color}>
+          <CryptoInfo cryptoCoin={cryptoCoin} />
         </div>
       </div>
   )
