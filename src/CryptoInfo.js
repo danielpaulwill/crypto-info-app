@@ -1,40 +1,25 @@
 import react, { useEffect, useState } from "react";
+// import CryptoInfoCard from "./CryptoInfoCard"
 
-function CryptoInfo({ cryptoData }) {
-  const [coinDescription, setCoinDescription] = useState("")
+function CryptoInfo({ idList }) {
 
-  console.log(coinDescription)
+  // const idInfo = ['bitcoin', 'ethereum', 'tether', 'binancecoin', 'usd-coin', 'cardano', 'solana', 'ripple', 'terra-luna', 'polkadot']
 
-  useEffect(() => {
-    fetch(`https://api.coingecko.com/api/v3/coins/${coin.id}`)
-      .then(res => res.json())
-      .then(data => setCoinDescription(`${data.description.en}`))
-  }, [])
+  // const infoCards = idInfo.map(coin => (
+  //   <CryptoInfoCard key={coin} coin={coin} />
+  // ))
 
-  function handleInfoClick(coin) {
-    fetch(`https://api.coingecko.com/api/v3/coins/${coin.id}`)
-      .then(res => res.json())
-      .then(data => setCoinDescription(`${data.description.en}`))
-  }
-
-  
-
-  const alternatingColor = ['card1', 'card2'];
-
-  const cryptoInfoCards = cryptoData.map((cryptoCoin, index) => (
-    <div 
-      className={alternatingColor[index % alternatingColor.length]} 
-      key={cryptoCoin.id}
-      onClick={e => handleInfoClick(cryptoCoin)} >
-        <h3>{cryptoCoin.name}</h3>
-        <p className="hidden">{coinDescription}</p>
-    </div> 
-  ));
 
   return (
-    <div>
-      <h1>CryptoInfo</h1>
-      {cryptoInfoCards}
+
+    <div className="labelBar">
+        <h3>Future Functionality</h3>
+      <div className="card2">
+        <ul>
+          <li>Descriptions following click on Crypto card</li>
+          <li>Chart showing price change history</li>
+        </ul>
+      </div>
     </div>
   )
 };

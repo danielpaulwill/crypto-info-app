@@ -9,14 +9,26 @@ import CryptoInfo from './CryptoInfo';
 
 function App() {
   const [cryptoData, setCryptoData] = useState([])
+  const [idList, setIdList] = useState([])
 
   function initFetch() {
     fetch('https://api.coingecko.com/api/v3/coins')
     .then(res =>res.json())
     .then(data => setCryptoData(data))
   }
+
+  function idFetch() {
+    let ids = []
+    fetch('https://api.coingecko.com/api/v3/coins')
+    .then(res =>res.json())
+    .then(data => data.map(coin => {
+      ids.push(coin.id)
+      setIdList(ids)
+    }))
+  }
   
   useEffect(() => {
+    idFetch()
     initFetch()
     setInterval(initFetch, [60000])
   }, [])
@@ -35,7 +47,7 @@ function App() {
           <CryptoList cryptoData={cryptoData} />
         </Route>
         <Route exact path="/info">
-          <CryptoInfo cryptoData={cryptoData}/>
+          <CryptoInfo idList={idList} cryptoData={cryptoData} />
         </Route>
       </Switch>
     </div>
