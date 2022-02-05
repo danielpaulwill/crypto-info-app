@@ -1,10 +1,60 @@
 import react, { useEffect, useState } from "react";
 import CryptoInfoCard from "./CryptoInfoCard"
 
-function CryptoInfo() {
+function CryptoInfo({ cryptoData }) {
   // const [cryptoInfo, setCryptoInfo] = useState([])
 
-  // const idInfo = ['bitcoin', 'ethereum', 'tether', 'binancecoin', 'usd-coin', 'cardano', 'solana', 'ripple', 'terra-luna', 'polkadot']
+  const idInfo = [{
+      key: 'bitcoin',
+      image: 'https://assets.coingecko.com/coins/images/1/thumb/bitcoin.png?1547033579',
+      url: 'https://bitcoin.org/en/'
+    }, 
+    {
+      key: 'ethereum',
+      image: "https://assets.coingecko.com/coins/images/279/thumb/ethereum.png?1595348880",
+      url: 'https://ethereum.org/en/'
+    },
+    {
+      key: 'tether',
+      image: "https://assets.coingecko.com/coins/images/325/thumb/Tether-logo.png?1598003707",
+      url: 'https://tether.to/en/'
+    },
+    {
+      key: 'binancecoin',
+      image: "https://assets.coingecko.com/coins/images/825/thumb/binance-coin-logo.png?1547034615",
+      url: 'https://www.binance.com/en'
+    },
+    {
+      key: 'usd-coin',
+      image: "https://assets.coingecko.com/coins/images/6319/thumb/USD_Coin_icon.png?1547042389",
+      url: 'https://www.circle.com/en/usdc'
+    },
+    {
+      key: 'cardano',
+      image: "https://assets.coingecko.com/coins/images/975/thumb/cardano.png?1547034860",
+      url: 'https://cardano.org/'
+    },
+    {
+      key: 'solana',
+      image: "https://assets.coingecko.com/coins/images/4128/thumb/solana.png?1640133422",
+      url: 'https://solana.com/'
+    },
+    {
+      key: 'ripple',
+      image: "https://assets.coingecko.com/coins/images/44/thumb/xrp-symbol-white-128.png?1605778731",
+      url: 'https://ripple.com/xrp/'
+    },
+    {
+      key: 'terra-luna',
+      image: "https://assets.coingecko.com/coins/images/8284/thumb/luna1557227471663.png?1567147072",
+      url: 'https://www.terra.money/'
+    },
+    {
+      key: 'polkadot',
+      image: "https://assets.coingecko.com/coins/images/12171/thumb/polkadot.png?1639712644",
+      url: 'https://polkadot.network/'
+    }];
+
 
   // const infoCards = idInfo.map(coin => {
   //   fetch(`https://api.coingecko.com/api/v3/coins/${coin}`)
@@ -14,7 +64,11 @@ function CryptoInfo() {
   //   <CryptoInfoCard key={coin} coin={cryptoInfo} />
   // )})
 
-
+  const infoCards = idInfo.map(coin => (
+    <div className="linkCards">
+      <img className="image" src={coin.image}></img>
+    </div>
+  ))
 
   return (
 
@@ -25,6 +79,9 @@ function CryptoInfo() {
           <li>Descriptions following click on Crypto card</li>
           <li>Chart showing price change history</li>
         </ul>
+      </div>
+      <div>
+        {infoCards}
       </div>
     </div>
   )
