@@ -1,13 +1,19 @@
 import react, { useEffect, useState } from "react";
-// import CryptoInfoCard from "./CryptoInfoCard"
+import CryptoInfoCard from "./CryptoInfoCard"
 
-function CryptoInfo({ idList }) {
+function CryptoInfo() {
+  const [cryptoInfo, setCryptoInfo] = useState([])
 
-  // const idInfo = ['bitcoin', 'ethereum', 'tether', 'binancecoin', 'usd-coin', 'cardano', 'solana', 'ripple', 'terra-luna', 'polkadot']
+  const idInfo = ['bitcoin', 'ethereum', 'tether', 'binancecoin', 'usd-coin', 'cardano', 'solana', 'ripple', 'terra-luna', 'polkadot']
 
-  // const infoCards = idInfo.map(coin => (
-  //   <CryptoInfoCard key={coin} coin={coin} />
-  // ))
+  const infoCards = idInfo.map(coin => {
+    fetch(`https://api.coingecko.com/api/v3/coins/${coin}`)
+    .then(res => res.json())
+    .then(data => setCryptoInfo(data))
+    return (
+    <CryptoInfoCard key={coin} coin={cryptoInfo} />
+  )})
+
 
 
   return (
@@ -20,6 +26,7 @@ function CryptoInfo({ idList }) {
           <li>Chart showing price change history</li>
         </ul>
       </div>
+      {infoCards}
     </div>
   )
 };
