@@ -213,8 +213,25 @@
 
 .hidden {
   visibility: hidden;
+  /* overflow: hidden; */
+  background-color: #C4D4F2;
+  /* transition: box-shadow .3s; */
+  width: 760px;
+  border-radius:10px;
+  border: 1px solid #A6A6A6;
+  float: left;
+  /* margin: 5px 0; */
 }
 
 .visible {
   visibility: visible;
+  /* overflow: hidden; */
+  background-color: #C4D4F2;
+  /* transition: box-shadow .3s; */
+  width: 760px;
+  height: 50px;
+  border-radius:10px;
+  border: 1px solid #A6A6A6;
+  float: left;
+  /* margin: 5px 0; */
 }

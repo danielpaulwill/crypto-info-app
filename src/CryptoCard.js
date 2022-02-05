@@ -25,9 +25,9 @@ function CryptoCard({ cryptoCoin, color }) {
         <p className="child">${cryptoCoin.market_data.current_price.usd}</p>
       </div>
       <br></br>
-      <div className={isHidden ? "hidden" : "visible"}>
-        <h3 className={color}>Am I hidden?</h3>
-      </div>
+      {/* <div className={isHidden ? "hidden" : "visible"}>
+        <p>Am I hidden?</p>
+      </div> */}
     </div>
   )
 };
