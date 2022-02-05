@@ -40,7 +40,7 @@ function NavBar() {
           className="navLink"
           activeClassName="active"
         >
-          Info
+          Add'l Info
         </NavLink>
 
       {/* <h3 className="first">Crypto List</h3> */}
