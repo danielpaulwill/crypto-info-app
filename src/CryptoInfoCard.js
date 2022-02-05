@@ -1,12 +1,6 @@
 import react, { useEffect, useState } from "react";
 
-function CryptoInfoCard({ coin }) {
-
-  
-  console.log(coin)
-
-  // const var1 = `<div>${cryptoInfo.description.en}</div>`
- 
+function CryptoInfoCard({ coin }) { 
 
 return (
   <div>

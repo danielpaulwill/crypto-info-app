@@ -210,3 +210,11 @@
   height: 20px;
   margin-right: 10px;
 }
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
