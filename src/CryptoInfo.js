@@ -81,6 +81,7 @@ function CryptoInfo({ cryptoData }) {
         </ul>
       </div>
       <div>
+        <h3 className="head">More info</h3>
         {infoCards}
       </div>
     </div>
