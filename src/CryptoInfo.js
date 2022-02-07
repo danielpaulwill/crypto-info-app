@@ -65,7 +65,7 @@ function CryptoInfo({ cryptoData }) {
   // )})
 
   const infoCards = idInfo.map(coin => (
-    <div className="linkCards" key={coin.key}>
+    <div className="linkCards" key={coin.key} onClick={e => window.location.href = `${coin.url}`}>
       <img className="linkImage" src={coin.image}></img>
     </div>
   ))
@@ -73,7 +73,7 @@ function CryptoInfo({ cryptoData }) {
   return (
 
     <div className="labelBar">
-        <h3>Future Functionality</h3>
+        <h3 id="head">Future Functionality</h3>
       <div className="card2">
         <ul>
           <li>Descriptions following click on Crypto card</li>
