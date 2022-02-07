@@ -82,7 +82,7 @@ function Comments() {
            <input type="submit" id="form" name="commentForm" onClick={handleOnSubmit}></input>
          </form>
       </div>
-      <div id="cardContainer">
+      <div>
         {commentCards}
       </div>
     </div>
