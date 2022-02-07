@@ -65,8 +65,8 @@ function CryptoInfo({ cryptoData }) {
   // )})
 
   const infoCards = idInfo.map(coin => (
-    <div className="linkCards">
-      <img className="image" src={coin.image}></img>
+    <div className="linkCards" key={coin.key}>
+      <img className="linkImage" src={coin.image}></img>
     </div>
   ))
 
