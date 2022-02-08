@@ -47,12 +47,8 @@
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border: 1px solid #A6A6A6;
-
 }
 
-#container {
-  background-color: white;
-}
 
 .card1 {
   overflow: hidden;
@@ -201,7 +197,6 @@
 }
 
 .form {
-  /* background-color: red; */
   padding-left: 50px;
   padding: 15px 20px;
 }
@@ -215,14 +210,12 @@
 
 #formName {
   display: inline-block;
-  /* float: left; */
   width: 150px;
   height: 20px;
   margin-right: 10px;
 }
 
 #formComment {
-  /* float: left; */
   display: inline-block;
   width: 250px;
   height: 20px;
@@ -231,32 +224,24 @@
 
 .hidden {
   visibility: hidden;
-  /* overflow: hidden; */
   background-color: #C4D4F2;
-  /* transition: box-shadow .3s; */
   width: 760px;
   border-radius:10px;
   border: 1px solid #A6A6A6;
   float: left;
-  /* margin: 5px 0; */
 }
 
 .visible {
   visibility: visible;
-  /* overflow: hidden; */
   background-color: #C4D4F2;
-  /* transition: box-shadow .3s; */
   width: 760px;
   height: 50px;
   border-radius:10px;
   border: 1px solid #A6A6A6;
   float: left;
-  /* margin: 5px 0; */
 }
 
 .linkCards {
-  /* overflow: hidden; */
-  /* background-color: #F2F2F2; */
   transition: box-shadow .3s;
   width: 70px;
   height: 70px;
