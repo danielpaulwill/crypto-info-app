@@ -1,8 +1,6 @@
-import react, { useEffect, useState } from "react";
-import CryptoInfoCard from "./CryptoInfoCard"
+import react from "react";
 
 function CryptoInfo({ cryptoData }) {
-  // const [cryptoInfo, setCryptoInfo] = useState([])
 
   const idInfo = [{
       key: 'bitcoin',
@@ -55,15 +53,6 @@ function CryptoInfo({ cryptoData }) {
       url: 'https://polkadot.network/'
     }];
 
-
-  // const infoCards = idInfo.map(coin => {
-  //   fetch(`https://api.coingecko.com/api/v3/coins/${coin}`)
-  //   .then(res => res.json())
-  //   .then(data => setCryptoInfo(data))
-  //   return (
-  //   <CryptoInfoCard key={coin} coin={cryptoInfo} />
-  // )})
-
   const infoCards = idInfo.map(coin => (
     <div className="linkCards" key={coin.key} onClick={e => window.location.href = `${coin.url}`}>
       <img className="linkImage" src={coin.image}></img>
@@ -71,7 +60,6 @@ function CryptoInfo({ cryptoData }) {
   ))
 
   return (
-
     <div className="labelBar">
         <h3 id="head">Future Functionality</h3>
       <div className="card2">

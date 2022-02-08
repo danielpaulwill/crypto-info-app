@@ -1,5 +1,4 @@
-import react, { useEffect } from "react";
-import { useState } from "react/cjs/react.development";
+import react, { useEffect, useState } from "react";
 
 function Comments() {
   const [commentData, setCommentData] = useState([])
@@ -36,7 +35,7 @@ function Comments() {
       <h3>{post.name}</h3>
       <p>{post.time}</p>
       <p>{post.comment}</p>
-      <button onClick={e => handleDelete(post)}>X delete X</button>
+      <button onClick={e => handleDelete(post)}>DELETE</button>
     </div>
   ))
   
@@ -77,9 +76,26 @@ function Comments() {
     <div>
        <div className="labelBar">
          <form className="form">
-           <input id="formName" type="text" placeholder="Name..." onChange={e => setFormNameData(e.target.value)} value={formNameData}></input>
-           <input id="formComment" type="text" placeholder="Comment..." onChange={e => setFormCommentData(e.target.value)} value={formCommentData}></input>
-           <input type="submit" id="form" name="commentForm" onClick={handleOnSubmit}></input>
+           <input
+            id="formName" 
+            type="text" 
+            placeholder="Name..." 
+            onChange={e => setFormNameData(e.target.value)} 
+            value={formNameData}
+           ></input>
+           <input 
+            id="formComment" 
+            type="text" 
+            placeholder="Comment..." 
+            onChange={e => setFormCommentData(e.target.value)} 
+            value={formCommentData}
+           ></input>
+           <input 
+            type="submit" 
+            id="form" 
+            name="commentForm" 
+            onClick={handleOnSubmit}
+           ></input>
          </form>
       </div>
       <div>

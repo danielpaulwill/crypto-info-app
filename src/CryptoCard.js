@@ -1,5 +1,4 @@
 import react, { useEffect, useState } from "react";
-import CryptoInfo from "./CryptoInfo";
 
 function CryptoCard({ cryptoCoin, color }) {
   const [isHidden, setIsHidden] = useState(true)
@@ -24,10 +23,6 @@ function CryptoCard({ cryptoCoin, color }) {
         </p>
         <p className="child">${cryptoCoin.market_data.current_price.usd}</p>
       </div>
-      <br></br>
-      {/* <div className={isHidden ? "hidden" : "visible"}>
-        <p>Am I hidden?</p>
-      </div> */}
     </div>
   )
 };

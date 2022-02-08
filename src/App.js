@@ -26,7 +26,6 @@ function App() {
     <div id='app'>
         <Header />
         <NavBar />
-      {/* <SearchBar /> */}
       <Switch>
         <Route exact path="/comments">
           <Comments />

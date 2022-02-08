@@ -1,4 +1,4 @@
-import react, { useEffect, useState } from "react";
+import react from "react";
 import CryptoCard from "./CryptoCard"
 
 function CryptoList({ cryptoData }) {
@@ -22,7 +22,6 @@ function CryptoList({ cryptoData }) {
           <p className="change"><b>Price Change</b></p>
           <p className="current"><b>Current Price</b></p>
          </div>
-        {/* <CryptoInfo /> */}
       </div>
       <div>
       {cryptoCards}

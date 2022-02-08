@@ -13,7 +13,7 @@ function NavBar() {
   };
 
   useEffect(() => {
-    const updateCountDown = setTimeout(() => timer(), 1000)
+    setTimeout(() => timer(), 1000)
   }, [countDown])
 
   return (
@@ -43,9 +43,6 @@ function NavBar() {
           Add'l Info
         </NavLink>
 
-      {/* <h3 className="first">Crypto List</h3> */}
-      {/* <h3 className="child">Link 2</h3> */}
-      {/* <h3 className="child">Comments</h3> */}
       <p className="space"></p>
       <p>Prices update in <b>{countDown}</b></p>
     </div>
