@@ -14,7 +14,9 @@ Comment section
 
 Links to each currencies website
 
-*gif
+
+![CryptoFinder](https://user-images.githubusercontent.com/86324206/152904878-840b928f-f48b-434c-9b65-2b4bc43e6b8c.gif)
+
 
 ## Installation
 
