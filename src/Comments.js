@@ -15,16 +15,15 @@ function Comments() {
 
   let clock = () => {
     const monthText = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-    const dayText = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"] 
+    const dayText = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"] 
     let date = new Date();
     let dateNum = date.getDate()
     let month = monthText[date.getMonth()]
-    let day = dayText[date.getDate()]
+    let day = dayText[date.getDay()]
     let hrs = date.getHours();
     let mins = date.getMinutes();
     
     let time = `${day}, ${month} ${dateNum} - ${hrs >= 12 ? hrs - 12 : hrs}:${mins < 10 ? `0${mins}` : mins} ${hrs >= 12 ? 'PM' : 'AM'}`
-
     setPostTime(time)
   }
 
