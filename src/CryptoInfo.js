@@ -1,6 +1,6 @@
 import react from "react";
 
-function CryptoInfo({ cryptoData }) {
+function CryptoInfo() {
 
   const idInfo = [{
       key: 'bitcoin',

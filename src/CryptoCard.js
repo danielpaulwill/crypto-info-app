@@ -1,4 +1,4 @@
-import react, { useEffect, useState } from "react";
+import react, { useState } from "react";
 
 function CryptoCard({ cryptoCoin, color }) {
   const [isHidden, setIsHidden] = useState(true)

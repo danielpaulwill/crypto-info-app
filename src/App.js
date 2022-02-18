@@ -8,18 +8,7 @@ import Comments from './Comments';
 import CryptoInfo from './CryptoInfo';
 
 function App() {
-  const [cryptoData, setCryptoData] = useState([])
 
-  function initFetch() {
-    fetch('https://api.coingecko.com/api/v3/coins')
-    .then(res =>res.json())
-    .then(data => setCryptoData(data))
-  }
-  
-  useEffect(() => {
-    initFetch()
-    setInterval(initFetch, [60000])
-  }, [])
 
 
   return (
@@ -31,10 +20,10 @@ function App() {
           <Comments />
         </Route>
         <Route exact path="/">
-          <CryptoList cryptoData={cryptoData} />
+          <CryptoList />
         </Route>
         <Route exact path="/info">
-          <CryptoInfo cryptoData={cryptoData} />
+          <CryptoInfo />
         </Route>
       </Switch>
     </div>
