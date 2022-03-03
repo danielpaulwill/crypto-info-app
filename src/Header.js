@@ -1,7 +1,9 @@
 import react, { useState, useEffect } from "react";
+import { Switch } from '@headlessui/react'
 
 function Header() {
   const [countDown, setCountDown] = useState(60)
+  const [enabled, setEnabled] = useState(false)
 
   function timer() {
     if (countDown < 2) {
@@ -23,13 +25,18 @@ function Header() {
     </div>
     <div>
       <p>Dark Mode</p>
-      <p className="space"></p>
-      <p className="space"></p>
-      <p className="space"></p>
-      <p className="space"></p>
-      <p className="space"></p>
+     
+      <label class="switch">
+      <input type="checkbox"></input>
+      <span class="slider round"></span>
+    </label>
 
 
+      {/* <p className="space"></p>
+      <p className="space"></p>
+      <p className="space"></p>
+      <p className="space"></p>
+      <p className="space"></p> */}
       <p>Prices update in <b>{countDown}</b></p>
     </div>
     <div className="labelBar">
