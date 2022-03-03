@@ -1,10 +1,10 @@
-import react, { useEffect, useState } from 'react';
+import react from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import CryptoList from './CryptoList';
 import Header from './Header';
-import NavBar from './NavBar';
-import Comments from './Comments';
+// import NavBar from './NavBar';
+// import Comments from './Comments';
 import CryptoInfo from './CryptoInfo';
 
 function App() {
@@ -14,18 +14,18 @@ function App() {
   return (
     <div id='app'>
         <Header />
-        <NavBar />
-      <Switch>
+        {/* <NavBar /> */}
+      {/* <Switch>
         <Route exact path="/comments">
           <Comments />
         </Route>
-        <Route exact path="/">
+        <Route exact path="/"> */}
           <CryptoList />
-        </Route>
+        {/* </Route>
         <Route exact path="/info">
           <CryptoInfo />
         </Route>
-      </Switch>
+      </Switch> */}
     </div>
   );
 }

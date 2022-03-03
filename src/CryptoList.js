@@ -28,14 +28,6 @@ function CryptoList() {
 
   return (
     <div>
-       <div>
-         <div className="labelBar">
-          <p className="first"><b>Name</b></p>
-          <p className="ticker"><b>Ticker</b></p>
-          <p className="change"><b>Price Change</b></p>
-          <p className="current"><b>Current Price</b></p>
-         </div>
-      </div>
       <div>
       {cryptoCards}
       </div>
