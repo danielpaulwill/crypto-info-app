@@ -1,6 +1,6 @@
 import react, { useState } from "react";
 
-function CryptoCard({ cryptoCoin, color }) {
+function CryptoCard({ cryptoCoin, isDarkMode }) {
   const [isHidden, setIsHidden] = useState(true)
 
   const changeStatus = Math.sign(cryptoCoin.market_data.price_change_24h_in_currency.usd)
@@ -10,7 +10,7 @@ function CryptoCard({ cryptoCoin, color }) {
   }
 
   return (
-    <div className="card" onClick={handleClick} >
+    <div className={isDarkMode ? "cardL" : "cardD"} onClick={handleClick} >
       <div>
         <img className="image" src={cryptoCoin.image.thumb}></img>
         <p className="child"><b>{cryptoCoin.name}</b></p>

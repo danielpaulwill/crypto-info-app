@@ -1,7 +1,7 @@
 import react, { useEffect, useState } from "react";
 import CryptoCard from "./CryptoCard"
 
-function CryptoList() {
+function CryptoList({ isDarkMode }) {
   const [cryptoData, setCryptoData] = useState([])
 
   function initFetch() {
@@ -13,16 +13,13 @@ function CryptoList() {
   useEffect(() => {
     initFetch()
     setInterval(initFetch, [60000])
-  }, [])
-
-  const alternatingColor = ['card1', 'card2'];
-  
+  }, [])  
 
   const cryptoCards = cryptoData.map((cryptoCoin, index) => (
           <CryptoCard 
             key={cryptoCoin.id} 
             cryptoCoin={cryptoCoin} 
-            // color={alternatingColor[index % alternatingColor.length]} 
+            isDarkMode={isDarkMode}
           />
           ))
 

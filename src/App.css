@@ -16,13 +16,13 @@
   position: absolute;
 }
 
-#header{
+#headerL {
   float: center;
   width: 500px;
   height: 135px;
   padding-left: 260px;
   padding-top: 20px;
-  /* background-color: #F2F2F2; */
+  background-color: #F2F2F2;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border: solid;
@@ -30,8 +30,18 @@
   border-width: thin;
 }
 
-#header {
-  background-color: #F2F2F2;
+#headerD {
+  float: center;
+  width: 500px;
+  height: 135px;
+  padding-left: 260px;
+  padding-top: 20px;
+  background-color: #A6A6A6;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border: solid;
+  border-color: #A6A6A6;
+  border-width: thin;
 }
 
 #navBar {
@@ -43,7 +53,7 @@
   border-width: thin;
 }
 
-.labelBar {
+.labelBarL {
   background-color: #C4D4F2;
   width: 760px;
   height: 55px;
@@ -55,8 +65,19 @@
   border: 1px solid #A6A6A6;
 }
 
+.labelBarD {
+  background-color: #0D0D0D;
+  width: 760px;
+  height: 55px;
+  border: solid;
+  border-color: #A6A6A6;
+  border-width: thin;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 1px solid #A6A6A6;
+}
 
-.card {
+.cardL {
   overflow: hidden;
   background-color: #F2F2F2;
   transition: box-shadow .3s;
@@ -69,11 +90,32 @@
   padding-bottom: 5px;
 }
 
-.card:nth-of-type(even) {
+.cardL:nth-of-type(even) {
   background-color: #FFF;
 }
 
-.card:hover {
+.cardL:hover {
+  box-shadow: 0 0 10px #A6A6A6; 
+}
+
+.cardD {
+  overflow: hidden;
+  background-color: #A6A6A6;
+  transition: box-shadow .3s;
+  width: 750px;
+  border-radius:10px;
+  border: 1px solid #A6A6A6;
+  float: left;
+  margin: 5px 0;
+  padding-left: 10px;
+  padding-bottom: 5px;
+}
+
+.cardD:nth-of-type(even) {
+  background-color: #F2F2F2;
+}
+
+.cardD:hover {
   box-shadow: 0 0 10px #A6A6A6; 
 }
 
@@ -220,27 +262,6 @@
   float: left;
 }
 
-/* .linkCards {
-  transition: box-shadow .3s;
-  width: 70px;
-  height: 70px;
-  border-radius:10px;
-  border: 1px solid #A6A6A6;
-  float: left;
-  margin: 0 25px 25px 25px;
-  padding: 5px;
-  padding-right: 20px;
-} */
-
-/* .linkCards:hover {
-  box-shadow: 0 0 10px #A6A6A6; 
-}
-
-.linkImage {
-  padding-left: 30px;
-  padding-top: 20px;
-} */
-
 #head {
   padding-left: 30px;
 }
@@ -255,7 +276,6 @@
 
 .container {
 display: flex;
-/* flex-direction: row; */
 justify-content: flex-start;
 gap: 40px;
 }
@@ -276,15 +296,7 @@ gap: 40px;
   height: 28px;
   border: 1px #0D0D0D solid;
   border-radius: 34px;
-
 }
-
-/* Hide default HTML checkbox */
-/* .switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-} */
 
 /* The slider */
 .slider {
