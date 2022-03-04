@@ -22,7 +22,7 @@ function CryptoList() {
           <CryptoCard 
             key={cryptoCoin.id} 
             cryptoCoin={cryptoCoin} 
-            color={alternatingColor[index % alternatingColor.length]} 
+            // color={alternatingColor[index % alternatingColor.length]} 
           />
           ))
 

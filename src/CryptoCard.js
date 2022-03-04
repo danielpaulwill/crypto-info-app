@@ -10,7 +10,7 @@ function CryptoCard({ cryptoCoin, color }) {
   }
 
   return (
-    <div className={isHidden ? color : "dark"} onClick={handleClick} >
+    <div className="card" onClick={handleClick} >
       <div>
         <img className="image" src={cryptoCoin.image.thumb}></img>
         <p className="child"><b>{cryptoCoin.name}</b></p>
