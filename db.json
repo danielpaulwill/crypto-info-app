@@ -1,22 +1,112 @@
 {
-  "comments": [
+  "websites": [
     {
-      "name": "Emily Ayers",
-      "time": "Tuesday, February 1 - 10:49 PM",
-      "comment": "I love all the crypto!",
+      "name": "btc",
+      "link": "url",
+      "id": 1
+    },
+    {
+      "name": "eth",
+      "link": "",
       "id": 2
     },
     {
-      "name": "Waniel Dilliams",
-      "time": "Tuesday, February 1 - 10:50 PM",
-      "comment": "I love Bitcoin!",
+      "name": "usdt",
+      "link": "",
       "id": 3
     },
     {
-      "name": "",
-      "time": "Friday, February 18 - 11:58 AM",
-      "comment": "I love tests!",
+      "name": "bnb",
+      "link": "",
       "id": 4
+    },
+    {
+      "name": "usdc",
+      "link": "",
+      "id": 5
+    },
+    {
+      "name": "xrp",
+      "link": "",
+      "id": 6
+    },
+    {
+      "name": "sol",
+      "link": "",
+      "id": 7
+    },
+    {
+      "name": "luna",
+      "link": "",
+      "id": 8
+    },
+    {
+      "name": "ada",
+      "link": "",
+      "id": 9
+    },
+    {
+      "name": "avax",
+      "link": "",
+      "id": 10
+    },
+    {
+      "name": "dot",
+      "link": "",
+      "id": 11
+    },
+    {
+      "name": "doge",
+      "link": "",
+      "id": 12
+    },
+    {
+      "name": "ust",
+      "link": "",
+      "id": 13
+    },
+    {
+      "name": "busd",
+      "link": "",
+      "id": 14
     }
   ]
 }
+
+
+14: "shib"
+15: "near"
+16: "wbtc"
+17: "steth"
+18: "cro"
+19: "matic"
+20: "dai"
+21: "ltc"
+22: "atom"
+23: "link"
+24: "trx"
+25: "bch"
+26: "ftt"
+27: "leo"
+28: "okb"
+29: "algo"
+30: "xlm"
+31: "etc"
+32: "xmr"
+33: "uni"
+34: "vet"
+35: "hbar"
+36: "icp"
+37: "fil"
+38: "ape"
+39: "egld"
+40: "axs"
+41: "sand"
+42: "mana"
+43: "ceth"
+44: "theta"
+45: "ftm"
+46: "xtz"
+47: "rune"
+48: "mim"
+49: "klay"
