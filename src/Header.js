@@ -19,8 +19,8 @@ function Header({ isDarkMode, handleDarkMode }) {
   }, [countDown])
   
   return (
-  <div>
-    <div id={isDarkMode ? "headerL" : "headerD"}>
+  <div className="container-fluid">
+    <div /*id={isDarkMode ? "headerL" : "headerD"}*/>
       <img id="logo" alt="Crypto Finder App" src="https://raw.githubusercontent.com/danielpaulwill/crypto-info-app/main/Assets/AppFinder.gif"></img>
       <h1 id="title">Crypto Finder</h1>
     </div>

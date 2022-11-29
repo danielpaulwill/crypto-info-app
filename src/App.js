@@ -13,20 +13,9 @@ function App() {
   }
 
   return (
-    <div id='app'>
-        <Header isDarkMode={isDarkMode} handleDarkMode={handleDarkMode}/>
-        {/* <NavBar /> */}
-      {/* <Switch>
-        <Route exact path="/comments">
-          <Comments />
-        </Route>
-        <Route exact path="/"> */}
-          <CryptoList isDarkMode={isDarkMode}/>
-        {/* </Route>
-        <Route exact path="/info">
-          <CryptoInfo />
-        </Route>
-      </Switch> */}
+    <div /*id='app'*/>
+      <Header isDarkMode={isDarkMode} handleDarkMode={handleDarkMode}/>
+      <CryptoList isDarkMode={isDarkMode}/>
     </div>
   );
 }
