@@ -24,8 +24,8 @@ function CryptoList({ isDarkMode }) {
           ))
 
   return (
-    <div>
-      {cryptoCards}
+    <div className="container-fluid">
+        {cryptoCards}
     </div>
   )
 };
