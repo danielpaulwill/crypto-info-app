@@ -10,10 +10,15 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
   }
 
   return (
-    <div className={isDarkMode ? "cardL" : "cardD"} onClick={handleClick} >
-      <div>
-        <img className="image" src={cryptoCoin.image.thumb}></img>
-        <p className="child"><b>{cryptoCoin.name}</b></p>
+    <div /*className={isDarkMode ? "cardL" : "cardD"}*/ className="row" onClick={handleClick}>
+      <div className="col-md-3 red"></div>
+      <div className="col-md-6 red">
+        <div className="col-md-1">
+          <img className="image blue" src={cryptoCoin.image.thumb}></img>
+        </div>
+        <div className="col-md-1">
+          <p className="child"><b>{cryptoCoin.name}</b></p>
+        </div>
         <p className="ticker">{cryptoCoin.symbol.toUpperCase()}</p>
         <p className={changeStatus === 1 ? "arrowUp" : "arrowDown"}>{changeStatus === 1 ? "▲" : "▼"}</p>
         <p className={changeStatus === 1 ? "positive" : "negative"}>

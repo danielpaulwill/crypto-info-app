@@ -25,9 +25,7 @@ function CryptoList({ isDarkMode }) {
 
   return (
     <div>
-      <div>
       {cryptoCards}
-      </div>
     </div>
   )
 };
