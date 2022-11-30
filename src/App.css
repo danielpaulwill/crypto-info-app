@@ -7,21 +7,25 @@
 
 #logo {
   height: 80px;
-  padding-left: 40px;
-  position: absolute;
+  display: block;
+  margin: 0 auto;
+}
+
+.red {
+  background-color: red;
+  border: solid 1px black;
 }
 
 #title {
-  padding-top: 60px;
-  position: absolute;
+  text-align: center;
 }
 
-#headerL {
-  float: center;
-  width: 500px;
-  height: 135px;
-  padding-left: 260px;
-  padding-top: 20px;
+.headerL {
+  /* float: center; */
+  /* width: 500px; */
+  /* height: 135px; */
+  /* padding-left: 260px; */
+  /* padding-top: 20px; */
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border: solid;
