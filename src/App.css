@@ -132,7 +132,7 @@
 .image {
   float: left;
   /* padding: 0 20px; */
-  /* margin: auto 20px; */
+  margin: auto 20px;
   margin-left: 30px;
   transform: translateY(70%);
 }
@@ -144,14 +144,17 @@
   /* padding-right: 25px; */
   /* padding-left: 75px; */
   /* height: 20px; */
+  margin: auto 20px;
   transform: translateY(50%);
 }
 
 .ticker {
   float: left;
+  height: 50%;
   /* width: 55px; */
   /* padding-right: 25px; */
   /* height: 20px; */
+  margin: auto 20px;
   transform: translateY(50%);
 }
 
