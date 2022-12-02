@@ -43,19 +43,23 @@ function Header({ isDarkMode, handleDarkMode }) {
     </div>
     <div className="row">
       <div className="col-md-3 red"></div>
-      <div className="col-1 blue"></div>
-      <div className="col-1 blue">
-        <p className="name"><b>Name</b></p>
-      </div>
-      <div className="col-1 blue">
-        <p className="ticker"><b>Ticker</b></p>
-      </div>
-      <div className="col-1 blue">
-        <p className="change"><b>Price Change</b></p>
-      </div>
-      <div className="col-1 blue"></div>
-      <div className="col-1 blue">
-        <p className="current"><b>Current Price</b></p>
+      <div className="col-md-6">
+        <div className="row">
+          <div className="col-2 blue"></div>
+          <div className="col-2 blue">
+            <p className="name"><b>Name</b></p>
+          </div>
+          <div className="col-2 blue">
+            <p className="ticker"><b>Ticker</b></p>
+          </div>
+          <div className="col-2 blue">
+            <p className="change"><b>Price Change</b></p>
+          </div>
+          <div className="col-2 blue"></div>
+          <div className="col-2 blue">
+            <p className="current"><b>Current Price</b></p>
+          </div>
+        </div>
       </div>
       <div className="col-md-3 red"></div>
     </div>

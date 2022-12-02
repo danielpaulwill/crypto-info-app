@@ -130,11 +130,11 @@
 }
 
 .image {
-  float: left;
+  /* float: left; */
   /* padding: 0 20px; */
   margin: auto 20px;
-  margin-left: 30px;
-  transform: translateY(70%);
+  /* margin-left: 30px; */
+  transform: translateY(50%);
 }
 
 .name {
@@ -179,8 +179,8 @@
 
 .positive {
   float: left;
-  width: 200px;
-  padding-right: 25px;
+  /* width: 200px; */
+  /* padding-right: 25px; */
   color: green;
 }
 
@@ -195,9 +195,10 @@
 
 .arrowDown {
   float: left;
-  width: 1px;
-  padding-right: 25px;
-  height: 20px;
+  /* width: 1px; */
+  /* padding-right: 25px; */
+  padding-right: 5px;
+  /* height: 20px; */
   color: red;
 }
 
