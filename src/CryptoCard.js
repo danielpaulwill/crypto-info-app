@@ -11,21 +11,21 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
 
   return (
     <div /*className={isDarkMode ? "cardL" : "cardD"}*/ className="row" onClick={handleClick}>
-      <div className="col-md-3 red"></div>
+      <div className="col-md-3"></div>
       {/* <div className="col-md-6 red"> */}
-      <div className="col-md-6 red">
-        <div className="row">
+      <div className="col-md-6">
+        <div className="row cardL">
 
-        <div className="col-2 blue">
+        <div className="col-2">
           <img className="image" src={cryptoCoin.image.thumb}></img>
         </div>
-        <div className="col-2 blue">
+        <div className="col-2">
           <p className="name"><b>{cryptoCoin.name}</b></p>
         </div>
         <div className="col-2">
           <p className="ticker">{cryptoCoin.symbol.toUpperCase()}</p>
         </div>
-        <div className="col-2">
+        <div className="col-4">
           <p className={changeStatus === 1 ? "arrowUp" : "arrowDown"}>{changeStatus === 1 ? "▲" : "▼"}</p>
           <p className={changeStatus === 1 ? "positive" : "negative"}>
             {changeStatus === 1 ? "+" : "-"}
@@ -38,7 +38,7 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
         </div>
       </div>
         </div>
-      <div className="col-md-3 red"></div>
+      <div className="col-md-3"></div>
       {/* </div> */}
     </div>
   )
