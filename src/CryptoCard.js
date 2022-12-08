@@ -14,7 +14,6 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
       <div className="col-md-3"></div>
       <div className="col-md-6">
         <div className={isDarkMode ? "row cardD" : "row cardL"} >
-          <section>
 
           <div className="col-2">
             <img className="image" src={cryptoCoin.image.thumb}></img>
@@ -36,7 +35,6 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
           <div className="col-3">
             <p className="child">${cryptoCoin.market_data.current_price.usd.toFixed(2)}</p>
           </div>
-          </section>
         </div>
       </div>
       <div className="col-md-3"></div>
