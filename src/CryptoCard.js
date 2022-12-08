@@ -25,15 +25,15 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
         <div className="col-2">
           <p className="ticker">{cryptoCoin.symbol.toUpperCase()}</p>
         </div>
-        <div className="col-4">
+        <div className="col-3">
           <p className={changeStatus === 1 ? "arrowUp" : "arrowDown"}>{changeStatus === 1 ? "▲" : "▼"}</p>
           <p className={changeStatus === 1 ? "positive" : "negative"}>
             {changeStatus === 1 ? "+" : "-"}
-            ${changeStatus === 1 ? cryptoCoin.market_data.price_change_24h_in_currency.usd.toFixed(4) : Math.abs(cryptoCoin.market_data.price_change_24h_in_currency.usd.toFixed(4))}
-            <br></br>({cryptoCoin.market_data.price_change_percentage_24h_in_currency.usd.toFixed(4)}%)
+            ${changeStatus === 1 ? cryptoCoin.market_data.price_change_24h_in_currency.usd.toFixed(3) : Math.abs(cryptoCoin.market_data.price_change_24h_in_currency.usd.toFixed(4))}
+            <br></br>({cryptoCoin.market_data.price_change_percentage_24h_in_currency.usd.toFixed(3)}%)
           </p>  
         </div>
-        <div className="col-2">
+        <div className="col-3">
           <p className="child">${cryptoCoin.market_data.current_price.usd.toFixed(2)}</p>
         </div>
       </div>
