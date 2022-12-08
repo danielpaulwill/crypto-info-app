@@ -6,7 +6,7 @@ import Header from './Header';
 import CryptoInfo from './CryptoInfo';
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(true)
+  const [isDarkMode, setIsDarkMode] = useState(false)
 
   function handleDarkMode(e) {
     setIsDarkMode(isDarkMode => !isDarkMode)

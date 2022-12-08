@@ -20,9 +20,9 @@ function Header({ isDarkMode, handleDarkMode }) {
   
   return (
   <div className="container-fluid">
-    <div /*id={isDarkMode ? "headerL" : "headerD"}*/ className="row">
+    <div className="row">
       <div className="col-md-3"></div>
-      <div className="col-md-6 headerL">
+      <div className={isDarkMode ? "col-md-6 headerD" : "col-md-6 headerL"}>
         <img id="logo" alt="Crypto Finder App" src="https://raw.githubusercontent.com/danielpaulwill/crypto-info-app/main/Assets/AppFinder.gif"></img>
         <p id="title" className="h4">Crypto Finder</p>
       </div>
