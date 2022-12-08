@@ -86,11 +86,7 @@
   transform: translateX(2%);
 }
 
-/* .cardL div:nth-of-type(even) {
-  background-color: #FFF;
-} */
-
-.cardLD div:nth-of-type(even) {
+.cardL div:nth-of-type(even) {
   background-color: #FFF;
 }
 
