@@ -10,11 +10,10 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
   }
 
   return (
-    <div /*className={isDarkMode ? "cardL" : "cardD"}*/ className="row" onClick={handleClick}>
+    <div className="row" onClick={handleClick}>
       <div className="col-md-3"></div>
-      {/* <div className="col-md-6 red"> */}
       <div className="col-md-6">
-        <div className="row cardL">
+        <div className={isDarkMode ? "row cardD" : "row cardL"} >
 
         <div className="col-2">
           <img className="image" src={cryptoCoin.image.thumb}></img>
@@ -29,8 +28,8 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
           <p className={changeStatus === 1 ? "arrowUp" : "arrowDown"}>{changeStatus === 1 ? "▲" : "▼"}</p>
           <p className={changeStatus === 1 ? "positive" : "negative"}>
             {changeStatus === 1 ? "+" : "-"}
-            ${changeStatus === 1 ? cryptoCoin.market_data.price_change_24h_in_currency.usd.toFixed(3) : Math.abs(cryptoCoin.market_data.price_change_24h_in_currency.usd.toFixed(4))}
-            <br></br>({cryptoCoin.market_data.price_change_percentage_24h_in_currency.usd.toFixed(3)}%)
+            ${changeStatus === 1 ? cryptoCoin.market_data.price_change_24h_in_currency.usd.toFixed(2) : Math.abs(cryptoCoin.market_data.price_change_24h_in_currency.usd.toFixed(2))}
+            <br></br>({cryptoCoin.market_data.price_change_percentage_24h_in_currency.usd.toFixed(2)}%)
           </p>  
         </div>
         <div className="col-3">
