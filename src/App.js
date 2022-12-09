@@ -1,4 +1,5 @@
 import './App.css';
+import { useState } from 'react'
 import CryptoList from './CryptoList';
 import Header from './Header';
 

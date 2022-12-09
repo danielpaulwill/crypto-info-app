@@ -2,12 +2,8 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
 
   const changeStatus = Math.sign(cryptoCoin.market_data.price_change_24h_in_currency.usd)
 
-  function handleClick() {
-    setIsHidden(isHidden => !isHidden)
-  }
-
   return (
-    <div className="row" onClick={handleClick}>
+    <div className="row">
       <div className="col-md-3"></div>
       <div className="col-md-6">
         <div className={isDarkMode ? "row cardD" : "row cardL"} >

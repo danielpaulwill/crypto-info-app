@@ -1,21 +1,16 @@
 import { useState, useEffect } from "react";
-// import { Switch } from '@headlessui/react'
 
 function Header({ isDarkMode, handleDarkMode }) {
   const [countDown, setCountDown] = useState(60)
-  const [enabled, setEnabled] = useState(false)
-
-
-  function timer() {
-    if (countDown < 2) {
-      setCountDown(60)
-    } else {
-      setCountDown(countDown => countDown - 1)
-    }
-  };
 
   useEffect(() => {
-    setTimeout(() => timer(), 1000)
+    setTimeout(() => {
+      if (countDown < 2) {
+        setCountDown(60)
+      } else {
+        setCountDown(countDown => countDown - 1)
+      }
+    }, 1000)
   }, [countDown])
   
   return (
