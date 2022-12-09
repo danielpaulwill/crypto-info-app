@@ -1,5 +1,5 @@
-import react, { useState, useEffect } from "react";
-import { Switch } from '@headlessui/react'
+import { useState, useEffect } from "react";
+// import { Switch } from '@headlessui/react'
 
 function Header({ isDarkMode, handleDarkMode }) {
   const [countDown, setCountDown] = useState(60)

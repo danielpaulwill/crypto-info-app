@@ -1,5 +1,3 @@
-// import react from "react";
-
 function CryptoInfo() {
 
   const idInfo = [{
@@ -55,7 +53,7 @@ function CryptoInfo() {
 
   const infoCards = idInfo.map(coin => (
     <div className="linkCards" key={coin.key} onClick={e => window.location.href = `${coin.url}`}>
-      <img className="linkImage" src={coin.image}></img>
+      <img className="linkImage" src={coin.image} alt="crypto thumbnail"></img>
     </div>
   ))
 
