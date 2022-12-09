@@ -1,9 +1,6 @@
-import react, { useState } from 'react';
-import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import CryptoList from './CryptoList';
 import Header from './Header';
-import CryptoInfo from './CryptoInfo';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false)
@@ -13,7 +10,7 @@ function App() {
   }
 
   return (
-    <div /*id='app'*/>
+    <div>
       <Header isDarkMode={isDarkMode} handleDarkMode={handleDarkMode}/>
       <CryptoList isDarkMode={isDarkMode}/>
     </div>

@@ -1,7 +1,4 @@
-import react, { useState } from "react";
-
 function CryptoCard({ cryptoCoin, isDarkMode }) {
-  const [isHidden, setIsHidden] = useState(true)
 
   const changeStatus = Math.sign(cryptoCoin.market_data.price_change_24h_in_currency.usd)
 
@@ -16,7 +13,7 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
         <div className={isDarkMode ? "row cardD" : "row cardL"} >
 
           <div className="col-2">
-            <img className="image" src={cryptoCoin.image.thumb}></img>
+            <img className="image" src={cryptoCoin.image.thumb} alt="cryptocurrency thumbnail" ></img>
           </div>
           <div className="col-2">
             <p className="name"><b>{cryptoCoin.name}</b></p>
