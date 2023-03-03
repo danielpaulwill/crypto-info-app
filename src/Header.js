@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Switch from '@mui/material/Switch';
 
 function Header({ isDarkMode, handleDarkMode }) {
   const [countDown, setCountDown] = useState(60)
@@ -12,6 +14,8 @@ function Header({ isDarkMode, handleDarkMode }) {
       }
     }, 1000)
   }, [countDown])
+
+  // const label = { inputProps: { 'aria-label': 'Switch demo' } };
   
   return (
   <div className="container-fluid">
@@ -27,8 +31,7 @@ function Header({ isDarkMode, handleDarkMode }) {
       <div className="col-md-3"></div>
       <div className={isDarkMode ? "col-md-3 centered darkModeContainerD" : "col-md-3 centered darkModeContainerL"} >
         <div className="form-check form-switch">
-          <input className="form-check-input" type="checkbox" onChange={e => handleDarkMode()} role="switch" id="flexSwitchCheckDefault" />
-          <label className="form-check-label" for="flexSwitchCheckDefault">Dark Mode</label>
+          <FormControlLabel control={<Switch />} label={isDarkMode ? "Light Mode" : "Dark Mode"} onChange={e => handleDarkMode()} />
         </div>
       </div>
       <div className={isDarkMode ? "col-md-3 centered darkModeContainerD" : "col-md-3 centered darkModeContainerL"} >
