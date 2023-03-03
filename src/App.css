@@ -293,3 +293,7 @@
   justify-content: center;
   transform: translateY(10%);
 }
+
+.card {
+  /* height: 80px; */
+}
