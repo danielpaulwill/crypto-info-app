@@ -1,6 +1,6 @@
 function CryptoCard({ cryptoCoin, isDarkMode }) {
 
-  const changeStatus = Math.sign(cryptoCoin.market_data.price_change_24h_in_currency.usd)
+  const changeStatus = Math.sign(cryptoCoin.price_change_percentage_24h_in_currency)
 
   return (
     <div className="row">
@@ -9,24 +9,24 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
         <div className={isDarkMode ? "row cardD" : "row cardL"} >
 
           <div className="col-2">
-            <img className="image" src={cryptoCoin.image.thumb} alt="cryptocurrency thumbnail" ></img>
+            <img className="image" src={cryptoCoin.image} alt="cryptocurrency thumbnail" ></img>
           </div>
           <div className="col-2">
             <p className="name"><b>{cryptoCoin.name}</b></p>
           </div>
           <div className="col-2">
-            <p className="ticker">{cryptoCoin.symbol.toUpperCase()}</p>
+            <p className="ticker">{cryptoCoin.symbol}</p>
           </div>
           <div className="col-3">
             <p className={changeStatus === 1 ? "arrowUp" : "arrowDown"}>{changeStatus === 1 ? "▲" : "▼"}</p>
             <p className={changeStatus === 1 ? "positive" : "negative"}>
               {changeStatus === 1 ? "+" : "-"}
-              ${changeStatus === 1 ? cryptoCoin.market_data.price_change_24h_in_currency.usd.toFixed(2) : Math.abs(cryptoCoin.market_data.price_change_24h_in_currency.usd.toFixed(2))}
-              <br></br>({cryptoCoin.market_data.price_change_percentage_24h_in_currency.usd.toFixed(2)}%)
+              ${changeStatus === 1 ? cryptoCoin.price_change_24h.toFixed(2) : Math.abs(cryptoCoin.price_change_24h.toFixed(2))}
+              <br></br>({cryptoCoin.price_change_percentage_24h.toFixed(2)}%)
             </p>  
           </div>
           <div className="col-3">
-            <p className="child">${cryptoCoin.market_data.current_price.usd.toFixed(2)}</p>
+            <p className="child">${cryptoCoin.current_price.toFixed(2)}</p>
           </div>
         </div>
       </div>

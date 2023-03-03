@@ -5,9 +5,9 @@ function CryptoList({ isDarkMode }) {
   const [cryptoData, setCryptoData] = useState([])
 
   function initFetch() {
-    fetch('https://api.coingecko.com/api/v3/coins')
-    .then(res =>res.json())
-    .then(data => setCryptoData(data))
+    fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1&sparkline=false&price_change_percentage=24h")
+    .then((response) => response.json())
+    .then((data) => setCryptoData(data));
   }
   
   useEffect(() => {

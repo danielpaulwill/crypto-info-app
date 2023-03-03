@@ -123,6 +123,8 @@
 
 .image {
   float: left;
+  height: 30px;
+  width: 30px;
   margin: auto 20px;
   transform: translateY(70%);
 }
