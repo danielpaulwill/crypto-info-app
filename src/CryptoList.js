@@ -5,14 +5,17 @@ import Box from '@mui/material/Box';
 
 function CryptoList({ isDarkMode }) {
   const [cryptoData, setCryptoData] = useState([])
+  const [cryptoList, setCryptoList] = useState()
 
   console.log(cryptoData)
 
-
-
-
-
   const columns = [
+    {
+      field: 'image',
+      headerName: '',
+      width: 150,
+      editable: true,
+    },
     {
       field: 'name',
       headerName: 'Name',
@@ -20,7 +23,13 @@ function CryptoList({ isDarkMode }) {
       editable: true,
     },
     {
-      field: 'price',
+      field: 'symbol',
+      headerName: '',
+      width: 150,
+      editable: true,
+    },
+    {
+      field: 'current_price',
       headerName: 'Price',
       width: 150,
       editable: true,
@@ -55,11 +64,6 @@ function CryptoList({ isDarkMode }) {
     { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
   ];
 
-
-
-
-
-
   function initFetch() {
     fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1&sparkline=false&price_change_percentage=24h")
     .then((response) => response.json())
@@ -87,7 +91,7 @@ function CryptoList({ isDarkMode }) {
 
     <Box sx={{ height: 400, width: '100%' }}>
       <DataGrid
-        rows={rows}
+        rows={cryptoData}
         columns={columns}
         initialState={{
           pagination: {
@@ -96,7 +100,7 @@ function CryptoList({ isDarkMode }) {
             },
           },
         }}
-        pageSizeOptions={[5]}
+        // pageSizeOptions={[5]}
         checkboxSelection
         disableRowSelectionOnClick
       />
