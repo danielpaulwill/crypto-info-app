@@ -292,6 +292,7 @@
   height: 30px;
   justify-content: center;
   transform: translateY(10%);
+  height: auto;
 }
 
 .card {
@@ -299,8 +300,8 @@
   width: inherit;
 }
 
-.temp {
-
+.centered-text {
+padding-top: 10px;
 }
 
 

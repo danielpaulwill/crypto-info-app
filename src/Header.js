@@ -20,27 +20,27 @@ function Header({ isDarkMode, handleDarkMode }) {
   return (
   <div className="container-fluid">
     <div className="row">
-      <div className="col-md-3"></div>
-      <div className={isDarkMode ? "col-md-6 headerD" : "col-md-6 headerL"}>
+      <div className="col-md-1"></div>
+      <div className={isDarkMode ? "col-md-10 headerD" : "col-md-10 headerL"}>
         <img id="logo" alt="Crypto Finder App" src="https://raw.githubusercontent.com/danielpaulwill/crypto-info-app/main/Assets/AppFinder.gif"></img>
         <p id="title" className="h4">Crypto Finder</p>
       </div>
-      <div className="col-md-3"></div>
+      <div className="col-md-1"></div>
     </div>
     <div /*className={isDarkMode ? "darkModeContainerL" : "darkModeContainerD"}*/ className="row">
-      <div className="col-md-3"></div>
-      <div className={isDarkMode ? "col-md-3 centered darkModeContainerD" : "col-md-3 centered darkModeContainerL"} >
+      <div className="col-md-1"></div>
+      <div className={isDarkMode ? "col-md-5 centered darkModeContainerD" : "col-md-5 centered darkModeContainerL"} >
         <div className="form-check form-switch">
           <FormControlLabel control={<Switch />} label={isDarkMode ? "Light Mode" : "Dark Mode"} onChange={e => handleDarkMode()} />
         </div>
       </div>
-      <div className={isDarkMode ? "col-md-3 centered darkModeContainerD" : "col-md-3 centered darkModeContainerL"} >
-        <p>Prices update in <b>{countDown}</b></p>
+      <div className={isDarkMode ? "col-md-5 centered darkModeContainerD" : "col-md-5 centered darkModeContainerL"} >
+        <p className="centered-text">Prices update in <b>{countDown}</b></p>
       </div>
-      <div className="col-md-3"></div>
+      <div className="col-md-1"></div>
     </div>
     <div className="row">
-      <div className="col-md-3"></div>
+      <div className="col-md-1"></div>
       <div className={isDarkMode ? "col-md-6 darkModeContainerD" : "col-md-6 darkModeContainerL"} >
         <div className="row">
           <div className="col-2"></div>
@@ -59,7 +59,7 @@ function Header({ isDarkMode, handleDarkMode }) {
           </div>
         </div>
       </div>
-      <div className="col-md-3"></div>
+      <div className="col-md-1"></div>
     </div>
   </div>
   )
