@@ -28,15 +28,15 @@ function Header({ isDarkMode, handleDarkMode }) {
     </div>
     <div /*className={isDarkMode ? "darkModeContainerL" : "darkModeContainerD"}*/ className="row">
       <div className="col-md-1"></div>
-      <div className="col-md-5 darkModeContainerD" onClick={console.log("Clicked")}>
+      <div className="col-md-5 darkModeContainerD">
         {/* <button id="darkModeButton">light mode</button> */}
-        light mode
+        <p onClick={e => console.log("Clicked")}>light mode</p>
         {/* <div className="form-check form-switch">
           <FormControlLabel control={<Switch />} label={isDarkMode ? "Light Mode" : "Dark Mode"} onChange={e => handleDarkMode()} />
         </div> */}
       </div>
-      <div className={isDarkMode ? "col-md-5 centered darkModeContainerD" : "col-md-5 centered darkModeContainerL"} >
-        <p className="centered-text">Prices update in <b>{countDown}</b></p>
+      <div className="col-md-5 darkModeContainerD">
+        <p>Prices update in <b>{countDown}</b></p>
       </div>
       <div className="col-md-1"></div>
     </div>
