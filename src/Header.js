@@ -5,15 +5,15 @@ import Switch from '@mui/material/Switch';
 function Header({ isDarkMode, handleDarkMode }) {
   const [countDown, setCountDown] = useState(60)
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     if (countDown < 2) {
-  //       setCountDown(60)
-  //     } else {
-  //       setCountDown(countDown => countDown - 1)
-  //     }
-  //   }, 1000)
-  // }, [countDown])
+  useEffect(() => {
+    setTimeout(() => {
+      if (countDown < 2) {
+        setCountDown(60)
+      } else {
+        setCountDown(countDown => countDown - 1)
+      }
+    }, 1000)
+  }, [countDown])
 
   
   return (
@@ -40,7 +40,7 @@ function Header({ isDarkMode, handleDarkMode }) {
       </div>
       <div className="col-md-1"></div>
     </div>
-    <div className="row">
+    {/* <div className="row">
       <div className="col-md-1"></div>
       <div className={isDarkMode ? "col-md-6 darkModeContainerD" : "col-md-6 darkModeContainerL"} >
         <div className="row">
@@ -61,7 +61,7 @@ function Header({ isDarkMode, handleDarkMode }) {
         </div>
       </div>
       <div className="col-md-1"></div>
-    </div>
+    </div> */}
   </div>
   )
 };
