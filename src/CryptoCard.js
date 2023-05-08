@@ -4,7 +4,7 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
 
 
   return (
-    <div>
+    <div className="cardD">
       Hello World!
     </div>
   )
