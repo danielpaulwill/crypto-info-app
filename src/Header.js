@@ -5,23 +5,22 @@ import Switch from '@mui/material/Switch';
 function Header({ isDarkMode, handleDarkMode }) {
   const [countDown, setCountDown] = useState(60)
 
-  useEffect(() => {
-    setTimeout(() => {
-      if (countDown < 2) {
-        setCountDown(60)
-      } else {
-        setCountDown(countDown => countDown - 1)
-      }
-    }, 1000)
-  }, [countDown])
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     if (countDown < 2) {
+  //       setCountDown(60)
+  //     } else {
+  //       setCountDown(countDown => countDown - 1)
+  //     }
+  //   }, 1000)
+  // }, [countDown])
 
-  // const label = { inputProps: { 'aria-label': 'Switch demo' } };
   
   return (
-  <div className="container-fluid">
+  <div>
     <div className="row">
       <div className="col-md-1"></div>
-      <div className={isDarkMode ? "col-md-10 headerD" : "col-md-10 headerL"}>
+      <div className={"col-md-10 headerD"}>
         <img id="logo" alt="Crypto Finder App" src="https://raw.githubusercontent.com/danielpaulwill/crypto-info-app/main/Assets/AppFinder.gif"></img>
         <p id="title" className="h4">Crypto Finder</p>
       </div>
@@ -29,10 +28,12 @@ function Header({ isDarkMode, handleDarkMode }) {
     </div>
     <div /*className={isDarkMode ? "darkModeContainerL" : "darkModeContainerD"}*/ className="row">
       <div className="col-md-1"></div>
-      <div className={isDarkMode ? "col-md-5 centered darkModeContainerD" : "col-md-5 centered darkModeContainerL"} >
-        <div className="form-check form-switch">
+      <div className="col-md-5 darkModeContainerD" onClick={console.log("Clicked")}>
+        {/* <button id="darkModeButton">light mode</button> */}
+        light mode
+        {/* <div className="form-check form-switch">
           <FormControlLabel control={<Switch />} label={isDarkMode ? "Light Mode" : "Dark Mode"} onChange={e => handleDarkMode()} />
-        </div>
+        </div> */}
       </div>
       <div className={isDarkMode ? "col-md-5 centered darkModeContainerD" : "col-md-5 centered darkModeContainerL"} >
         <p className="centered-text">Prices update in <b>{countDown}</b></p>

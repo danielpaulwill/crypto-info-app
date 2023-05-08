@@ -28,13 +28,14 @@
 }
 
 .headerD {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border: solid;
-  border-color: #A6A6A6;
-  border-width: thin;
-  background-color: #696969;
+  /* border-top-left-radius: 20px; */
+  /* border-top-right-radius: 20px; */
+  /* border: solid; */
+  /* border-color: #A6A6A6; */
+  /* border-width: thin; */
+  background-color: #1F1F1F;
   color: #F2F2F2;
+  width: 100%;
 }
 
 #headerD {
@@ -49,6 +50,20 @@
   border: solid;
   border-color: #A6A6A6;
   border-width: thin;
+}
+
+.darkModeContainerL {
+  border: solid 1px #A6A6A6;
+  background-color: #F2F2F2;
+}
+
+.darkModeContainerD {
+  border: solid 1px #1F1F1F;
+  background-color: #000;
+  color: #FFF;
+  width: 50%;
+  height: 30px;
+  text-align: center;
 }
 
 .labelBarL {
@@ -268,17 +283,6 @@
 .head {
   padding-top: 120px;
   padding-left: 30px;
-}
-
-.darkModeContainerL {
-  border: solid 1px #A6A6A6;
-  background-color: #F2F2F2;
-}
-
-.darkModeContainerD {
-  border: solid 1px #A6A6A6;
-  background-color: #696969;
-  color: #F2F2F2;
 }
 
 #countDown {
