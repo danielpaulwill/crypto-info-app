@@ -7,9 +7,9 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
 
   const changeStatus = Math.sign(cryptoCoin.price_change_percentage_24h_in_currency)
 
-  let bitcoin = "assets/bitcoin.png"
-  let ethereum = "assets/ethereum.png"
-  let tether = "assets/tether.png"
+  let bitcoin = "assets/images/bitcoin.png"
+  let ethereum = "assets/images/ethereum.png"
+  let tether = "assets/images/tether.png"
 
 
   useEffect(() => {
@@ -173,7 +173,7 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
 
       <img src={cryptoImage} alt="crypto coin logo" className="cardImg"></img>
       </div>
-      {/* Hello World! */}
+      Hello World!
     </div>
   )
 };

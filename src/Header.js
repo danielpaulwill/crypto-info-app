@@ -21,7 +21,7 @@ function Header({ isDarkMode, handleDarkMode }) {
     <div className="row">
       <div className="col-md-1"></div>
       <div className={"col-md-10 headerD"}>
-        <img id="logo" alt="Crypto Finder App" src="https://raw.githubusercontent.com/danielpaulwill/crypto-info-app/main/Assets/AppFinder.gif"></img>
+        <img id="logo" alt="Crypto Finder App" src="assets/images/AppFinder.gif"></img>
         <p id="title" className="h4">Crypto Finder</p>
       </div>
       <div className="col-md-1"></div>
