@@ -173,7 +173,7 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
 
       <img src={cryptoImage} alt="crypto coin logo" className="cardImg"></img>
       </div>
-      Hello World!
+      {/* Hello World! */}
     </div>
   )
 };
