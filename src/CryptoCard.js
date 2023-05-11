@@ -13,18 +13,6 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
 
 
 /*
-"id": "usd-coin"
-"image": "https://assets.coingecko.com/coins/images/6319/large/USD_Coin_icon.png?1547042389"
-
-"id": "ripple"
-"image": "https://assets.coingecko.com/coins/images/44/large/xrp-symbol-white-128.png?1605778731"
-
-"id": "cardano"
-"image": "https://assets.coingecko.com/coins/images/975/large/cardano.png?1547034860"
-
-"id": "staked-ether"
-"image": "https://assets.coingecko.com/coins/images/13442/large/steth_logo.png?1608607546"
-
 "id": "dogecoin"
 "image": "https://assets.coingecko.com/coins/images/5/large/dogecoin.png?1547792256"
 
@@ -158,9 +146,9 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
 
   return (
     <div className="cardD">
-      <div className="imgContainer" style={{"background-color": `#${bgColor}`}}>
+      <div className="imgContainer">
 
-      <img src={cryptoCoin.image} className="cardImg"></img>
+      <img src="assets/bitcoin.png" className="cardImg"></img>
       </div>
       Hello World!
     </div>
