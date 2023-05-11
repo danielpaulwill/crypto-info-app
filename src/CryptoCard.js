@@ -10,6 +10,12 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
   let bitcoin = "assets/images/bitcoin.png"
   let ethereum = "assets/images/ethereum.png"
   let tether = "assets/images/tether.png"
+  let binancecoin = "assets/images/binancecoin.png"
+  let cardano = "assets/images/cardano.png"
+  let dogecoin = "assets/images/dogecoin.png"
+  let ripple = "assets/images/ripple.png"
+  let stakedEther = "assets/images/staked-ether.png"
+  let usdCoin = "assets/images/usd-coin.png"
 
 
   useEffect(() => {
@@ -19,53 +25,25 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
       setCryptoImage(ethereum)
     } else if (cryptoCoin.id === "tether") {
       setCryptoImage(tether)
-    } else setCryptoImage(tether)
-    //  else if (cryptoCoin.id === "x") {
-    //   setCryptoImage(x)
-    // } else if (cryptoCoin.id === "x") {
-    //   setCryptoImage(x)
-    // } else if (cryptoCoin.id === "x") {
-    //   setCryptoImage(x)
-    // } else if (cryptoCoin.id === "x") {
-    //   setCryptoImage(x)
-    // } else if (cryptoCoin.id === "x") {
-    //   setCryptoImage(x)
-    // } else if (cryptoCoin.id === "x") {
-    //   setCryptoImage(x)
-    // }
+    } else if (cryptoCoin.id === "binancecoin") {
+      setCryptoImage(binancecoin)
+    } else if (cryptoCoin.id === "cardano") {
+      setCryptoImage(cardano)
+    } else if (cryptoCoin.id === "dogecoin") {
+      setCryptoImage(dogecoin)
+    } else if (cryptoCoin.id === "ripple") {
+      setCryptoImage(ripple)
+    } else if (cryptoCoin.id === "staked-ether") {
+      setCryptoImage(stakedEther)
+    } else if (cryptoCoin.id === "usd-coin") {
+      setCryptoImage(usdCoin)
+    // } else if (cryptoCoin.id === "usd-coin") {
+    //   setCryptoImage(usdCoin)
+
+    }
   }, [])
 
 /*
-"id": "dogecoin"
-"image": "https://assets.coingecko.com/coins/images/5/large/dogecoin.png?1547792256"
-
-"id": "matic-network"
-"image": "https://assets.coingecko.com/coins/images/4713/large/matic-token-icon.png?1624446912"
-
-"id": "solana"
-"image": "https://assets.coingecko.com/coins/images/4128/large/solana.png?1640133422"
-
-"id": "polkadot"
-"image": "https://assets.coingecko.com/coins/images/12171/large/polkadot.png?1639712644"
-
-"id": "tron"
-"image": "https://assets.coingecko.com/coins/images/1094/large/tron-logo.png?1547035066"
-
-"id": "litecoin"
-"image": "https://assets.coingecko.com/coins/images/2/large/litecoin.png?1547033580"
-
-"id": "binance-usd"
-"image": "https://assets.coingecko.com/coins/images/9576/large/BUSD.png?1568947766"
-
-"id": "shiba-inu"
-"image": "https://assets.coingecko.com/coins/images/11939/large/shiba.png?1622619446"
-
-"id": "avalanche-2"
-"image": "https://assets.coingecko.com/coins/images/12559/large/Avalanche_Circle_RedWhite_Trans.png?1670992574"
-
-"id": "dai"
-"image": "https://assets.coingecko.com/coins/images/9956/large/4943.png?1636636734"
-
 "id": "wrapped-bitcoin"
 "image": "https://assets.coingecko.com/coins/images/7598/large/wrapped_bitcoin_wbtc.png?1548822744"
 
