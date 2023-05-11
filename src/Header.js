@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Switch from '@mui/material/Switch';
 
 function Header({ isDarkMode, handleDarkMode }) {
   const [countDown, setCountDown] = useState(60)
@@ -12,32 +14,34 @@ function Header({ isDarkMode, handleDarkMode }) {
       }
     }, 1000)
   }, [countDown])
+
   
   return (
-  <div className="container-fluid">
+  <div id="headerD">
     <div className="row">
-      <div className="col-md-3"></div>
-      <div className={isDarkMode ? "col-md-6 headerD" : "col-md-6 headerL"}>
+      <div className="col-md-1"></div>
+      <div className={"col-md-10 headerD"}>
         <img id="logo" alt="Crypto Finder App" src="https://raw.githubusercontent.com/danielpaulwill/crypto-info-app/main/Assets/AppFinder.gif"></img>
         <p id="title" className="h4">Crypto Finder</p>
       </div>
-      <div className="col-md-3"></div>
+      <div className="col-md-1"></div>
     </div>
     <div /*className={isDarkMode ? "darkModeContainerL" : "darkModeContainerD"}*/ className="row">
-      <div className="col-md-3"></div>
-      <div className={isDarkMode ? "col-md-3 centered darkModeContainerD" : "col-md-3 centered darkModeContainerL"} >
-        <div className="form-check form-switch">
-          <input className="form-check-input" type="checkbox" onChange={e => handleDarkMode()} role="switch" id="flexSwitchCheckDefault" />
-          <label className="form-check-label" for="flexSwitchCheckDefault">Dark Mode</label>
-        </div>
+      <div className="col-md-1"></div>
+      <div className="col-md-5 darkModeContainerD">
+        {/* <button id="darkModeButton">light mode</button> */}
+        <p onClick={e => console.log("Clicked")}>light mode</p>
+        {/* <div className="form-check form-switch">
+          <FormControlLabel control={<Switch />} label={isDarkMode ? "Light Mode" : "Dark Mode"} onChange={e => handleDarkMode()} />
+        </div> */}
       </div>
-      <div className={isDarkMode ? "col-md-3 centered darkModeContainerD" : "col-md-3 centered darkModeContainerL"} >
+      <div className="col-md-5 darkModeContainerD">
         <p>Prices update in <b>{countDown}</b></p>
       </div>
-      <div className="col-md-3"></div>
+      <div className="col-md-1"></div>
     </div>
-    <div className="row">
-      <div className="col-md-3"></div>
+    {/* <div className="row">
+      <div className="col-md-1"></div>
       <div className={isDarkMode ? "col-md-6 darkModeContainerD" : "col-md-6 darkModeContainerL"} >
         <div className="row">
           <div className="col-2"></div>
@@ -56,8 +60,8 @@ function Header({ isDarkMode, handleDarkMode }) {
           </div>
         </div>
       </div>
-      <div className="col-md-3"></div>
-    </div>
+      <div className="col-md-1"></div>
+    </div> */}
   </div>
   )
 };
