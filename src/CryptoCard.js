@@ -1,16 +1,39 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 function CryptoCard({ cryptoCoin, isDarkMode }) {
-  const [bgColor, setBgColor] = useState()
+  const [cryptoImage, setCryptoImage] = useState()
 
   console.log(cryptoCoin.id)
 
   const changeStatus = Math.sign(cryptoCoin.price_change_percentage_24h_in_currency)
 
-  let bitcoin = "F7931A"
-  let ethereum = "FFF"
+  let bitcoin = "assets/bitcoin.png"
+  let ethereum = "assets/ethereum.png"
+  let tether = "assets/tether.png"
 
 
+  useEffect(() => {
+    if (cryptoCoin.id === "bitcoin") {
+      setCryptoImage(bitcoin)
+    } else if (cryptoCoin.id === "ethereum") {
+      setCryptoImage(ethereum)
+    } else if (cryptoCoin.id === "tether") {
+      setCryptoImage(tether)
+    } else setCryptoImage(tether)
+    //  else if (cryptoCoin.id === "x") {
+    //   setCryptoImage(x)
+    // } else if (cryptoCoin.id === "x") {
+    //   setCryptoImage(x)
+    // } else if (cryptoCoin.id === "x") {
+    //   setCryptoImage(x)
+    // } else if (cryptoCoin.id === "x") {
+    //   setCryptoImage(x)
+    // } else if (cryptoCoin.id === "x") {
+    //   setCryptoImage(x)
+    // } else if (cryptoCoin.id === "x") {
+    //   setCryptoImage(x)
+    // }
+  }, [])
 
 /*
 "id": "dogecoin"
@@ -148,7 +171,7 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
     <div className="cardD">
       <div className="imgContainer">
 
-      <img src="assets/bitcoin.png" className="cardImg"></img>
+      <img src={cryptoImage} alt="crypto coin logo" className="cardImg"></img>
       </div>
       Hello World!
     </div>
