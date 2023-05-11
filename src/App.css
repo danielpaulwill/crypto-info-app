@@ -39,17 +39,7 @@
 }
 
 #headerD {
-  float: center;
-  width: 500px;
-  height: 135px;
-  padding-left: 260px;
-  padding-top: 20px;
-  background-image: linear-gradient(to right, #99AFF2, #A6A6A6, #0D0D0D);
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border: solid;
-  border-color: #A6A6A6;
-  border-width: thin;
+  width: 100%;
 }
 
 .darkModeContainerL {
@@ -69,6 +59,7 @@
 #cardListD {
   background-color: #000;
   padding-top: 1px;
+  width: 100%;
 }
 
 .cardD {

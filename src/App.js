@@ -11,7 +11,7 @@ function App() {
   }
 
   return (
-    <div className='app'>
+    <div id='app'>
       <Header isDarkMode={isDarkMode} handleDarkMode={handleDarkMode}/>
       <CryptoList isDarkMode={isDarkMode}/>
     </div>
