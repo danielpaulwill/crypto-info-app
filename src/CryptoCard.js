@@ -44,42 +44,6 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
   }, [])
 
 /*
-"id": "wrapped-bitcoin"
-"image": "https://assets.coingecko.com/coins/images/7598/large/wrapped_bitcoin_wbtc.png?1548822744"
-
-"id": "uniswap"
-"image": "https://assets.coingecko.com/coins/images/12504/large/uniswap-uni.png?1600306604"
-
-"id": "chainlink"
-"image": "https://assets.coingecko.com/coins/images/877/large/chainlink-new-logo.png?1547034700"
-
-"id": "leo-token"
-"image": "https://assets.coingecko.com/coins/images/8418/large/leo-token.png?1558326215"
-
-"id": "cosmos"
-"image": "https://assets.coingecko.com/coins/images/1481/large/cosmos_hub.png?1555657960"
-
-"id": "the-open-network"
-"image": "https://assets.coingecko.com/coins/images/17980/large/ton_symbol.png?1670498136"
-
-"id": "monero"
-"image": "https://assets.coingecko.com/coins/images/69/large/monero_logo.png?1547033729"
-
-"id": "okb"
-"image": "https://assets.coingecko.com/coins/images/4463/large/WeChat_Image_20220118095654.png?1642471050"
-
-"id": "ethereum-classic"
-"image": "https://assets.coingecko.com/coins/images/453/large/ethereum-classic-logo.png?1547034169"
-
-"id": "stellar"
-"image": "https://assets.coingecko.com/coins/images/100/large/Stellar_symbol_black_RGB.png?1552356157"
-
-"id": "internet-computer"
-"image": "https://assets.coingecko.com/coins/images/14495/large/Internet_Computer_logo.png?1620703073"
-
-"id": "bitcoin-cash"
-"image": "https://assets.coingecko.com/coins/images/780/large/bitcoin-cash-circle.png?1594689492"
-
 "id": "filecoin"
 "image": "https://assets.coingecko.com/coins/images/12817/large/filecoin.png?1602753933"
 
@@ -140,9 +104,6 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
 "id": "edgecoin-2",
 "image": "https://assets.coingecko.com/coins/images/14409/large/edgecoin_bank_logo-4_%281%29.png?1673251201",
 */
-
-
-
 
 
   return (
