@@ -16,7 +16,27 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
   let ripple = "assets/images/ripple.png"
   let stakedEther = "assets/images/staked-ether.png"
   let usdCoin = "assets/images/usd-coin.png"
-
+  let avalanche2 = "assets/images/avalanche-2.png"
+  let binanceUsd = "assets/images/binance-usd.png"
+  let bitcoinCash = "assets/images/bitcoin-cash.png"
+  let chainlink = "assets/images/chainlink.png"
+  let cosmos = "assets/images/cosmos.png"
+  let dai = "assets/images/dai.png"
+  let ethereumClassic = "assets/images/ethereum-classic.png"
+  let internetComputer = "assets/images/internet-computer.png"
+  let leoToken = "assets/images/leo-token.png"
+  let litecoin = "assets/images/litecoin.png"
+  let maticNetwork = "assets/images/matic-network.png"
+  let monero = "assets/images/monero.png"
+  let okb = "assets/images/okb.png"
+  let polkadot = "assets/images/polkadot.png"
+  let shibaInu = "assets/images/shiba-inu.png"
+  let solana = "assets/images/solana.png"
+  let stellar = "assets/images/stellar.png"
+  let openNetwork = "assets/images/the-open-network.png"
+  let tron = "assets/images/tron.png"
+  let uniswap = "assets/images/uniswap.png"
+  let wrappedBitcoin = "assets/images/wrapped-bitcoin.png"
 
   useEffect(() => {
     if (cryptoCoin.id === "bitcoin") {
@@ -37,9 +57,48 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
       setCryptoImage(stakedEther)
     } else if (cryptoCoin.id === "usd-coin") {
       setCryptoImage(usdCoin)
-    // } else if (cryptoCoin.id === "usd-coin") {
-    //   setCryptoImage(usdCoin)
-
+    } else if (cryptoCoin.id === "avalanche-2") {
+      setCryptoImage(avalanche2)
+    } else if (cryptoCoin.id === "binance-usd") {
+      setCryptoImage(binanceUsd)
+    } else if (cryptoCoin.id === "bitcoin-cash") {
+      setCryptoImage(bitcoinCash)
+    } else if (cryptoCoin.id === "chainlink") {
+      setCryptoImage(chainlink)
+    } else if (cryptoCoin.id === "cosmos") {
+      setCryptoImage(cosmos)
+    } else if (cryptoCoin.id === "dai") {
+      setCryptoImage(dai)
+    } else if (cryptoCoin.id === "ethereum-classic") {
+      setCryptoImage(ethereumClassic)
+    } else if (cryptoCoin.id === "internet-computer") {
+      setCryptoImage(internetComputer)
+    } else if (cryptoCoin.id === "leo-token") {
+      setCryptoImage(leoToken)
+    } else if (cryptoCoin.id === "litecoin") {
+      setCryptoImage(litecoin)
+    } else if (cryptoCoin.id === "matic-network") {
+      setCryptoImage(maticNetwork)
+    } else if (cryptoCoin.id === "monero") {
+      setCryptoImage(monero)
+    } else if (cryptoCoin.id === "okb") {
+      setCryptoImage(okb)
+    } else if (cryptoCoin.id === "polkadot") {
+      setCryptoImage(polkadot)
+    } else if (cryptoCoin.id === "shiba-inu") {
+      setCryptoImage(shibaInu)
+    } else if (cryptoCoin.id === "solana") {
+      setCryptoImage(solana)
+    } else if (cryptoCoin.id === "stellar") {
+      setCryptoImage(stellar)
+    } else if (cryptoCoin.id === "the-open-network") {
+      setCryptoImage(openNetwork)
+    } else if (cryptoCoin.id === "tron") {
+      setCryptoImage(tron)
+    } else if (cryptoCoin.id === "uniswap") {
+      setCryptoImage(uniswap)
+    } else if (cryptoCoin.id === "wrapped-bitcoin") {
+      setCryptoImage(wrappedBitcoin)
     }
   }, [])
 
