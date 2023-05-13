@@ -167,11 +167,14 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
 
   return (
     <div className="cardD">
-      <div className="imgContainer">
-
-      <img src={cryptoImage} alt="crypto coin logo" className="cardImg"></img>
+      <div className="leftContainer">
+        <div className="imgContainer">
+          <img src={cryptoImage} alt="crypto coin logo" className="cardImg"></img>
+        </div>
+        <div className="textContainer">
+          <p className="cryptoName">{cryptoCoin.name}</p>
+        </div>
       </div>
-      Hello World!
     </div>
   )
 };
