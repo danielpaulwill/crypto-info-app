@@ -95,6 +95,7 @@
   display: flex;
   justify-content: center;
   position: relative;
+  /* background-color: blue; */
 }
 
 .cardImg {
@@ -104,9 +105,11 @@
 }
 
 .textContainer {
-  background-color: red;
+  /* background-color: red; */
   width: fit-content;
   margin: auto;
+  margin-left: 10px;
+  margin-top: -10px;
   /* margin: 10px 5px; */
   /* width: 60px; */
   /* display: flex; */
@@ -114,18 +117,31 @@
   /* position: relative; */
 }
 
-.cryptoName {
-  color: #FFF;
-  font-weight: lighter;
-  align-content: center;
+.symbolContainer {
+  width: fit-content;
+  margin: auto;
+  margin-left: 10px;
+  margin-top: -10px;
+  background-color: red;
+  position: left;
 }
 
 .leftContainer {
   background-color: red;
-  width: 35%;
-  height: 90%;
+  /* width: 35%;
+  height: 90%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
+.cryptoName {
+  color: #FFF;
+  font-weight: lighter;
+  /* align-content: center; */
+  text-align: center;
+  margin: 0 auto;
+}
 
 
 
