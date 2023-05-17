@@ -166,20 +166,23 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
 
 
   return (
-    <div className="cardD">
-      <div className="leftContainer col-3">
+    <div className=" row cardD">
+      <div className="leftContainer col">
         <div className="imgContainer">
           <img src={cryptoImage} alt="crypto coin logo" className="cardImg"></img>
-        </div>
-        <div className="symbolContainer">
-          <p className="cryptoName">{cryptoCoin.symbol.toUpperCase()}</p>
         </div>
         <div className="textContainer">
           <p className="cryptoName">{cryptoCoin.name}</p>
         </div>
       </div>
-      <div className="col-3">
-        Column 2
+      <div className="symbolContainer col">
+          <p className="cryptoTicker">{cryptoCoin.symbol.toUpperCase()}</p>
+      </div>
+      <div className="col">
+        Column 3
+      </div>
+      <div className="col">
+        Column 4
       </div>
     </div>
   )

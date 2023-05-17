@@ -105,29 +105,18 @@
 }
 
 .textContainer {
-  /* background-color: red; */
   width: fit-content;
   margin: auto;
   margin-left: 10px;
   margin-top: -10px;
-  /* margin: 10px 5px; */
-  /* width: 60px; */
-  /* display: flex; */
-  /* justify-content: center; */
-  /* position: relative; */
 }
 
 .symbolContainer {
-  width: fit-content;
-  margin: auto;
-  margin-left: 10px;
-  margin-top: -10px;
   background-color: red;
-  position: left;
 }
 
 .leftContainer {
-  background-color: red;
+  background-color: blue;
   /* width: 35%;
   height: 90%; */
   display: flex;
@@ -140,7 +129,15 @@
   font-weight: lighter;
   /* align-content: center; */
   text-align: center;
-  margin: 0 auto;
+  margin: 0 auto; 
+}
+
+.cryptoTicker {
+  color: #FFF;
+  font-weight: lighter;
+  text-align: left;
+  margin-top: 30px;
+  background-color: green;
 }
 
 
