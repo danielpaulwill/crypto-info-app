@@ -181,8 +181,10 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
       <div className="col">
         Column 3
       </div>
-      <div className="col">
-        Column 4
+      <div className="priceChange col">
+        <p className={(cryptoCoin.current_price < 0) ? "negativeChange" : "positiveChange"}>{cryptoCoin.current_price.toFixed(2)} 1H</p>
+        <p className={(cryptoCoin.price_change_percentage_24h < 0) ? "negativeChange" : "positiveChange"}>{cryptoCoin.price_change_percentage_24h.toFixed(2)}% 1D</p>
+        <p># 1W</p>
       </div>
     </div>
   )
