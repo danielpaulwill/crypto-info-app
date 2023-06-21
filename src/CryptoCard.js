@@ -3,7 +3,18 @@ import { useEffect, useState } from "react"
 function CryptoCard({ cryptoCoin, isDarkMode }) {
   const [cryptoImage, setCryptoImage] = useState()
 
-  console.log(cryptoCoin.id)
+  console.log(typeof cryptoCoin.current_price)
+
+
+
+  const currentPrice = cryptoCoin.current_price;
+  const formattedPrice = currentPrice.toLocaleString('en-US', {
+  style: 'currency',
+  currency: 'USD'
+});
+
+
+
 
   const changeStatus = Math.sign(cryptoCoin.price_change_percentage_24h_in_currency)
 
@@ -179,7 +190,7 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
           <p className="cryptoTicker">{cryptoCoin.symbol.toUpperCase()}</p>
       </div>
       <div className="col">
-        Column 3
+        <p className="cryptoTicker">{formattedPrice}</p>
       </div>
       <div className="priceChange col">
         <p className={(cryptoCoin.current_price < 0) ? "negativeChange" : "positiveChange"}>{cryptoCoin.current_price.toFixed(2)} 1H</p>
