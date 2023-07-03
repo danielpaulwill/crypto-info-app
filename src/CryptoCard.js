@@ -3,10 +3,6 @@ import { useEffect, useState } from "react"
 function CryptoCard({ cryptoCoin, isDarkMode }) {
   const [cryptoImage, setCryptoImage] = useState()
 
-  console.log(typeof cryptoCoin.current_price)
-
-
-
   const currentPrice = cryptoCoin.current_price;
   const formattedPrice = currentPrice.toLocaleString('en-US', {
   style: 'currency',
@@ -177,7 +173,7 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
 
 
   return (
-    <div className=" row cardD">
+    <div className="row cardD">
       <div className="leftContainer col">
         <div className="imgContainer">
           <img src={cryptoImage} alt="crypto coin logo" className="cardImg"></img>

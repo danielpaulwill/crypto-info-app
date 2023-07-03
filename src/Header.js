@@ -19,49 +19,19 @@ function Header({ isDarkMode, handleDarkMode }) {
   return (
   <div id="headerD">
     <div className="row">
-      <div className="col-md-1"></div>
-      <div className={"col-md-10 headerD"}>
+      <div className="headerD">
         <img id="logo" alt="Crypto Finder App" src="assets/images/AppFinder.gif"></img>
         <p id="title" className="h4">Crypto Finder</p>
       </div>
-      <div className="col-md-1"></div>
     </div>
-    <div /*className={isDarkMode ? "darkModeContainerL" : "darkModeContainerD"}*/ className="row">
-      <div className="col-md-1"></div>
-      <div className="col-md-5 darkModeContainerD">
-        {/* <button id="darkModeButton">light mode</button> */}
+    <div className="row">
+      <div className="col-md-12 col-sm-6 col-6 darkModeContainerD">
         <p onClick={e => console.log("Clicked")}>light mode</p>
-        {/* <div className="form-check form-switch">
-          <FormControlLabel control={<Switch />} label={isDarkMode ? "Light Mode" : "Dark Mode"} onChange={e => handleDarkMode()} />
-        </div> */}
       </div>
-      <div className="col-md-5 darkModeContainerD">
+      <div className="col-md-12 col-sm-6 col-6 darkModeContainerD">
         <p>Prices update in <b>{countDown}</b></p>
       </div>
-      <div className="col-md-1"></div>
     </div>
-    {/* <div className="row">
-      <div className="col-md-1"></div>
-      <div className={isDarkMode ? "col-md-6 darkModeContainerD" : "col-md-6 darkModeContainerL"} >
-        <div className="row">
-          <div className="col-2"></div>
-          <div className="col-2">
-            <p className="name"><b>Name</b></p>
-          </div>
-          <div className="col-2">
-            <p className="ticker"><b>Ticker</b></p>
-          </div>
-          <div className="col-2">
-            <p className="change"><b>Price Change</b></p>
-          </div>
-          <div className="col-2"></div>
-          <div className="col-2">
-            <p className="current"><b>Current Price</b></p>
-          </div>
-        </div>
-      </div>
-      <div className="col-md-1"></div>
-    </div> */}
   </div>
   )
 };
