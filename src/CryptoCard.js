@@ -10,8 +10,6 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
 });
 
 
-
-
   const changeStatus = Math.sign(cryptoCoin.price_change_percentage_24h_in_currency)
 
   let bitcoin = "assets/images/bitcoin.png"
@@ -173,14 +171,27 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
 
 
   return (
-    <div className="row cardD">
-      <div className="leftContainer col">
-        <div className="imgContainer">
-          <img src={cryptoImage} alt="crypto coin logo" className="cardImg"></img>
+    // entire row, including background
+    <div className="row">
+
+      {/* Card itself, where the curved grey starts */}
+      <div className="cardD">
+        <div className="col-3 red">
+          <div className="imgContainer">
+            <img src={cryptoImage} alt="crypto coin logo" className="cardImg"></img>
+          </div>
+          <div className="textContainer">
+            <p className="cryptoName">{cryptoCoin.name}</p>
+          </div>
+
         </div>
-        <div className="textContainer">
-          <p className="cryptoName">{cryptoCoin.name}</p>
-        </div>
+
+
+
+      </div>
+
+
+      {/* <div className="leftContainer col">
       </div>
       <div className="symbolContainer col">
           <p className="cryptoTicker">{cryptoCoin.symbol.toUpperCase()}</p>
@@ -192,7 +203,7 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
         <p className={(cryptoCoin.current_price < 0) ? "negativeChange" : "positiveChange"}>{cryptoCoin.current_price.toFixed(2)} 1H</p>
         <p className={(cryptoCoin.price_change_percentage_24h < 0) ? "negativeChange" : "positiveChange"}>{cryptoCoin.price_change_percentage_24h.toFixed(2)}% 1D</p>
         <p># 1W</p>
-      </div>
+      </div> */}
     </div>
   )
 };
