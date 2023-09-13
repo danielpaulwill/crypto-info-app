@@ -176,16 +176,19 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
 
       {/* Card itself, where the curved grey starts */}
       <div className="cardD">
-        <div className="col-3 red">
-          <div className="imgContainer">
-            <img src={cryptoImage} alt="crypto coin logo" className="cardImg"></img>
+        <div className="logoContainer">
+          <div className="col-3">
+            <div className="imgContainer">
+              <img src={cryptoImage} alt="crypto coin logo" className="cardImg"></img>
+            </div>
+            <div className="textContainer">
+              <p className="cryptoName">{cryptoCoin.name}</p>
+            </div>
           </div>
-          <div className="textContainer">
-            <p className="cryptoName">{cryptoCoin.name}</p>
-          </div>
-
         </div>
-
+        <div className="symbolContainer">
+          <p className="symbolText">{cryptoCoin.symbol}</p>
+        </div>
 
 
       </div>
