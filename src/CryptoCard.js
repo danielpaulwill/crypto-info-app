@@ -187,7 +187,10 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
           </div>
         </div>
         <div className="symbolContainer">
-          <p className="symbolText">{cryptoCoin.symbol}</p>
+          <p className="symbolText">{cryptoCoin.symbol.toUpperCase()}</p>
+        </div>
+        <div className="priceContainer">
+          <p className="priceText">{formattedPrice}</p>
         </div>
 
 

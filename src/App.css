@@ -93,6 +93,7 @@
 .logoContainer {
   width: 70px;
   height: 95px;
+  background-color: blue;
 }
 
 .imgContainer {
@@ -119,8 +120,9 @@
 
 .symbolContainer {
   text-align: center;
-  width: 100px;
+  width: 80px;
   height: 95px;
+  background-color: red;
 }
 
 .symbolText {
@@ -130,6 +132,22 @@
   position: relative;
   top: 30%;
   color: #FFF;
+}
+
+.priceContainer {
+  text-align: center;
+  width: 100px;
+  height: 95px;
+  background-color: blue;
+}
+
+.priceText {
+  font-size: large;
+  font-weight: bold;
+  align-items: center;
+  color: #FFF;
+  position: relative;
+  top: 35%;
 }
 
 .leftContainer {
