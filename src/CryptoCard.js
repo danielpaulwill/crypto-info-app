@@ -175,7 +175,7 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
     <div className="row">
 
       {/* Card itself, where the curved grey starts */}
-      <div className="cardD">
+      <div className={isDarkMode ? "cardD" : "cardL"}>
         <div className="logoContainer">
           <div className="col-3">
             <div className="imgContainer">

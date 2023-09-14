@@ -17,18 +17,18 @@ function Header({ isDarkMode, handleDarkMode }) {
 
   
   return (
-  <div id="headerD">
+  <div>
     <div className="row">
-      <div className="headerD">
+      <div className={isDarkMode ? "headerD" : "headerL"}>
         <img id="logo" alt="Crypto Finder App" src="assets/images/AppFinder.gif"></img>
         <p id="title" className="h4">Crypto Finder</p>
       </div>
     </div>
     <div className="row">
-      <div className="col-md-12 col-sm-6 col-6 darkModeContainerD">
-        <p onClick={e => console.log("Clicked")}>light mode</p>
+      <div className={isDarkMode ? "col-md-12 col-sm-6 col-6 darkModeContainerD" : "col-md-12 col-sm-6 col-6 darkModeContainerL"}>
+        <p onClick={handleDarkMode}>light mode</p>
       </div>
-      <div className="col-md-12 col-sm-6 col-6 darkModeContainerD">
+      <div className={isDarkMode ? "col-md-12 col-sm-6 col-6 darkModeContainerD" : "col-md-12 col-sm-6 col-6 darkModeContainerL"}>
         <p>Prices update in <b>{countDown}</b></p>
       </div>
     </div>
