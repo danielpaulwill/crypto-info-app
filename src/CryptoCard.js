@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-function CryptoCard({ cryptoCoin, isDarkMode }) {
+function CryptoCard({ cryptoCoin, isDarkMode, handleCardClick }) {
   const [cryptoImage, setCryptoImage] = useState()
 
   const currentPrice = cryptoCoin.current_price;
@@ -8,9 +8,6 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
   style: 'currency',
   currency: 'USD'
 });
-
-
-  // const changeStatus = Math.sign(cryptoCoin.price_change_percentage_24h_in_currency)
 
   let bitcoin = "assets/images/bitcoin.png"
   let ethereum = "assets/images/ethereum.png"
@@ -176,7 +173,7 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
     <div className="row">
 
       {/* Card itself, where the curved grey starts */}
-      <div className={isDarkMode ? "cardD" : "cardL"}>
+      <div className={isDarkMode ? "cardD" : "cardL"} onClick={handleCardClick}>
         <div className="logoContainer">
           <div className="col-3">
             <div className="imgContainer">
@@ -197,24 +194,7 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
           <p className={isDarkMode ? "changeText textD" : "changeText textL"}>24 hr Δ</p>
           <p className={(cryptoCoin.price_change_percentage_24h < 0) ? "negativeChange" : "positiveChange"}>{(cryptoCoin.price_change_percentage_24h < 0) ? "▼" : "▲"} {cryptoCoin.price_change_percentage_24h.toFixed(2)}%</p>
         </div>
-
-
       </div>
-
-
-      {/* <div className="leftContainer col">
-      </div>
-      <div className="symbolContainer col">
-          <p className="cryptoTicker">{cryptoCoin.symbol.toUpperCase()}</p>
-      </div>
-      <div className="col">
-        <p className="cryptoTicker">{formattedPrice}</p>
-      </div>
-      <div className="priceChange col">
-        <p className={(cryptoCoin.current_price < 0) ? "negativeChange" : "positiveChange"}>{cryptoCoin.current_price.toFixed(2)} 1H</p>
-        <p className={(cryptoCoin.price_change_percentage_24h < 0) ? "negativeChange" : "positiveChange"}>{cryptoCoin.price_change_percentage_24h.toFixed(2)}% 1D</p>
-        <p># 1W</p>
-      </div> */}
     </div>
   )
 };
