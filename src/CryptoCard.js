@@ -182,18 +182,18 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
               <img src={cryptoImage} alt="crypto coin logo" className="cardImg"></img>
             </div>
             <div className="textContainer">
-              <p className="cryptoName">{cryptoCoin.name}</p>
+              <p className={isDarkMode ? "cryptoName textD" : "cryptoName textL"}>{cryptoCoin.name}</p>
             </div>
           </div>
         </div>
         <div className="symbolContainer">
-          <p className="symbolText">{cryptoCoin.symbol.toUpperCase()}</p>
+          <p className={isDarkMode ? "symbolText textD" : "symbolText textL"}>{cryptoCoin.symbol.toUpperCase()}</p>
         </div>
         <div className="priceContainer">
-          <p className="priceText">{formattedPrice}</p>
+          <p className={isDarkMode ? "priceText textD" : "priceText textL"}>{formattedPrice}</p>
         </div>
         <div className="changeContainer">
-          <p className="changeText">24 hr Δ</p>
+          <p className={isDarkMode ? "changeText textD" : "changeText textL"}>24 hr Δ</p>
           <p className={(cryptoCoin.price_change_percentage_24h < 0) ? "negativeChange" : "positiveChange"}>{(cryptoCoin.price_change_percentage_24h < 0) ? "▼" : "▲"} {cryptoCoin.price_change_percentage_24h.toFixed(2)}%</p>
         </div>
 

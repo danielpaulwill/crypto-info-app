@@ -1490,7 +1490,7 @@ function CryptoList({ isDarkMode }) {
   //         ))
 
   return (
-    <div id="cardListD">
+    <div id={isDarkMode ? "cardListD" : "cardListL"}>
       {cryptoCards}
     </div>
 

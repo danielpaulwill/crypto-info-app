@@ -66,6 +66,12 @@
   width: 100%;
 }
 
+#cardListL {
+  background-color: #A6A6A6;
+  padding-top: 1px;
+  width: 100%;
+}
+
 .cardD {
   background-color: #3B3B3B;
   border: solid 1px #4E4E4E;
@@ -150,7 +156,6 @@
   align-items: center;
   position: relative;
   top: 30%;
-  color: #FFF;
 }
 
 .priceContainer {
@@ -165,7 +170,6 @@
   font-size: large;
   font-weight: bold;
   align-items: center;
-  color: #FFF;
   position: relative;
   top: 35%;
 }
@@ -204,13 +208,20 @@
 }
 
 .cryptoName {
-  color: #FFF;
   font-weight: lighter;
   text-align: center;
   margin: 0 auto;
   /* overflow: visible; */
   white-space: nowrap;
   font-size: small;
+}
+
+.textD {
+  color: #FFF;
+}
+
+.textL {
+  color: #000;
 }
 
 .cryptoTicker {
