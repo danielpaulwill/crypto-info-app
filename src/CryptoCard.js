@@ -170,10 +170,10 @@ function CryptoCard({ cryptoCoin, isDarkMode, handleCardClick }) {
 
   return (
     // entire row, including background
-    <div className="row">
+    <div onClick={e => handleCardClick(cryptoCoin.id)} className="row">
 
       {/* Card itself, where the curved grey starts */}
-      <div className={isDarkMode ? "cardD" : "cardL"} onClick={handleCardClick}>
+      <div className={isDarkMode ? "cardD" : "cardL"}>
         <div className="logoContainer">
           <div className="col-3">
             <div className="imgContainer">

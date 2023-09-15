@@ -1,38 +1,40 @@
 import { useState, useEffect } from "react";
 import CryptoCard from "./CryptoCard"
+import CryptoInfo from "./CryptoInfo";
 
 function CryptoList({ isDarkMode }) {
-  const [cryptoData, setCryptoData] = useState([])
-  const [cryptoList, setCryptoList] = useState()
-
-//   const cryptoData = [
-//     {
-//         "id": "bitcoin",
-//         "symbol": "btc",
-//         "name": "Bitcoin",
-//         "image": "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579",
-//         "current_price": 28597,
-//         "market_cap": 553975237820,
-//         "market_cap_rank": 1,
-//         "fully_diluted_valuation": 600686694697,
-//         "total_volume": 11892043650,
-//         "high_24h": 29093,
-//         "low_24h": 28519,
-//         "price_change_24h": -343.68254196519047,
-//         "price_change_percentage_24h": -1.18754,
-//         "market_cap_change_24h": -7166779621.186279,
-//         "market_cap_change_percentage_24h": -1.27718,
-//         "circulating_supply": 19366968.0,
-//         "total_supply": 21000000.0,
-//         "max_supply": 21000000.0,
-//         "ath": 69045,
-//         "ath_change_percentage": -58.60611,
-//         "ath_date": "2021-11-10T14:24:11.849Z",
-//         "atl": 67.81,
-//         "atl_change_percentage": 42048.2671,
-//         "atl_date": "2013-07-06T00:00:00.000Z",
-//         "roi": null,
-//         "last_updated": "2023-05-08T01:15:59.436Z"
+    const [cryptoData, setCryptoData] = useState([])
+    const [cryptoList, setCryptoList] = useState([])
+    const [currentPage, setCurrentPage] = useState(cryptoList)
+    
+    //   const cryptoData = [
+        //     {
+            //         "id": "bitcoin",
+            //         "symbol": "btc",
+          //         "name": "Bitcoin",
+          //         "image": "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579",
+          //         "current_price": 28597,
+          //         "market_cap": 553975237820,
+          //         "market_cap_rank": 1,
+          //         "fully_diluted_valuation": 600686694697,
+          //         "total_volume": 11892043650,
+          //         "high_24h": 29093,
+          //         "low_24h": 28519,
+          //         "price_change_24h": -343.68254196519047,
+          //         "price_change_percentage_24h": -1.18754,
+          //         "market_cap_change_24h": -7166779621.186279,
+          //         "market_cap_change_percentage_24h": -1.27718,
+          //         "circulating_supply": 19366968.0,
+          //         "total_supply": 21000000.0,
+          //         "max_supply": 21000000.0,
+          //         "ath": 69045,
+          //         "ath_change_percentage": -58.60611,
+          //         "ath_date": "2021-11-10T14:24:11.849Z",
+          //         "atl": 67.81,
+          //         "atl_change_percentage": 42048.2671,
+          //         "atl_date": "2013-07-06T00:00:00.000Z",
+          //         "roi": null,
+          //         "last_updated": "2023-05-08T01:15:59.436Z"
 //     },
 //     {
 //         "id": "ethereum",
@@ -1460,7 +1462,8 @@ function CryptoList({ isDarkMode }) {
 
 
 // UNCOMMENT AFTER DEVELOPMENT
-  function initFetch() {
+
+function initFetch() {
     fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1&sparkline=false&price_change_percentage=24h")
     .then((response) => response.json())
     .then((data) => setCryptoData(data));
@@ -1476,20 +1479,20 @@ useEffect(() => {
 //   UNCOMMENT AFTER DEVELOPMENT
   useEffect(() => {
     if (cryptoData !== []) {
-      let cryptoCards = cryptoData.map(cryptoCoin => <CryptoCard key={cryptoCoin.id} cryptoCoin={cryptoCoin} isDarkMode={isDarkMode} />)
+      let cryptoCards = cryptoData.map(cryptoCoin => <CryptoCard key={cryptoCoin.id} cryptoCoin={cryptoCoin} isDarkMode={isDarkMode} handleCardClick={handleCardClick} />)
       setCryptoList(cryptoCards)
     }
   }, [cryptoData])
   
-  function handleCardClick() {
-    console.log("Clickety Clack")
+  function handleCardClick(e) {
+    console.log(e)
   }
   
-  let cryptoCards = cryptoData.map(cryptoCoin => <CryptoCard key={cryptoCoin.id} cryptoCoin={cryptoCoin} isDarkMode={isDarkMode} handleCardClick={handleCardClick} />)
+//   let cryptoCards = cryptoData.map(cryptoCoin => <CryptoCard key={cryptoCoin.id} cryptoCoin={cryptoCoin} isDarkMode={isDarkMode} handleCardClick={handleCardClick} />)
 
   return (
     <div id={isDarkMode ? "cardListD" : "cardListL"}>
-      {cryptoCards}
+      {cryptoList}
     </div>
 
   )
