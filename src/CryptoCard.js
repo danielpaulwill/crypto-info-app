@@ -10,7 +10,7 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
 });
 
 
-  const changeStatus = Math.sign(cryptoCoin.price_change_percentage_24h_in_currency)
+  // const changeStatus = Math.sign(cryptoCoin.price_change_percentage_24h_in_currency)
 
   let bitcoin = "assets/images/bitcoin.png"
   let ethereum = "assets/images/ethereum.png"
@@ -105,7 +105,8 @@ function CryptoCard({ cryptoCoin, isDarkMode }) {
     } else if (cryptoCoin.id === "wrapped-bitcoin") {
       setCryptoImage(wrappedBitcoin)
     }
-  }, [])
+  }, [cryptoCoin.id, bitcoin, ethereum, tether, binancecoin, cardano, dogecoin, ripple, stakedEther, usdCoin, avalanche2, binanceUsd, bitcoinCash, chainlink, cosmos, dai, ethereumClassic, internetComputer, leoToken, litecoin, maticNetwork, monero, okb, polkadot, shibaInu, solana, stellar, openNetwork, tron, uniswap, wrappedBitcoin])
+
 
 /*
 "id": "filecoin"

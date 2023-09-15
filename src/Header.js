@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Switch from '@mui/material/Switch';
+// import { useState, useEffect } from "react";
+// import FormControlLabel from '@mui/material/FormControlLabel';
+// import Switch from '@mui/material/Switch';
 
 function Header({ isDarkMode, handleDarkMode }) {
   // const [countDown, setCountDown] = useState(60)
