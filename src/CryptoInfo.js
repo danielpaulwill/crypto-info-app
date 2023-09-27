@@ -1,76 +1,149 @@
-function CryptoInfo() {
+import { useState, useEffect } from "react";
 
-  const idInfo = [{
-      key: 'bitcoin',
-      image: 'https://assets.coingecko.com/coins/images/1/thumb/bitcoin.png?1547033579',
-      url: 'https://bitcoin.org/en/'
-    }, 
-    {
-      key: 'ethereum',
-      image: "https://assets.coingecko.com/coins/images/279/thumb/ethereum.png?1595348880",
-      url: 'https://ethereum.org/en/'
-    },
-    {
-      key: 'tether',
-      image: "https://assets.coingecko.com/coins/images/325/thumb/Tether-logo.png?1598003707",
-      url: 'https://tether.to/en/'
-    },
-    {
-      key: 'binancecoin',
-      image: "https://assets.coingecko.com/coins/images/825/thumb/binance-coin-logo.png?1547034615",
-      url: 'https://www.binance.com/en'
-    },
-    {
-      key: 'usd-coin',
-      image: "https://assets.coingecko.com/coins/images/6319/thumb/USD_Coin_icon.png?1547042389",
-      url: 'https://www.circle.com/en/usdc'
-    },
-    {
-      key: 'cardano',
-      image: "https://assets.coingecko.com/coins/images/975/thumb/cardano.png?1547034860",
-      url: 'https://cardano.org/'
-    },
-    {
-      key: 'solana',
-      image: "https://assets.coingecko.com/coins/images/4128/thumb/solana.png?1640133422",
-      url: 'https://solana.com/'
-    },
-    {
-      key: 'ripple',
-      image: "https://assets.coingecko.com/coins/images/44/thumb/xrp-symbol-white-128.png?1605778731",
-      url: 'https://ripple.com/xrp/'
-    },
-    {
-      key: 'terra-luna',
-      image: "https://assets.coingecko.com/coins/images/8284/thumb/luna1557227471663.png?1567147072",
-      url: 'https://www.terra.money/'
-    },
-    {
-      key: 'polkadot',
-      image: "https://assets.coingecko.com/coins/images/12171/thumb/polkadot.png?1639712644",
-      url: 'https://polkadot.network/'
-    }];
+function CryptoInfo({ coin, isDarkMode}) {
+  const [cryptoImage, setCryptoImage] = useState()
 
-  const infoCards = idInfo.map(coin => (
-    <div className="linkCards" key={coin.key} onClick={e => window.location.href = `${coin.url}`}>
-      <img className="linkImage" src={coin.image} alt="crypto thumbnail"></img>
-    </div>
-  ))
+  console.log(coin[0])
+
+  let bitcoin = "assets/images/bitcoin.png"
+  let ethereum = "assets/images/ethereum.png"
+  let tether = "assets/images/tether.png"
+  let binancecoin = "assets/images/binancecoin.png"
+  let cardano = "assets/images/cardano.png"
+  let dogecoin = "assets/images/dogecoin.png"
+  let ripple = "assets/images/ripple.png"
+  let stakedEther = "assets/images/staked-ether.png"
+  let usdCoin = "assets/images/usd-coin.png"
+  let avalanche2 = "assets/images/avalanche-2.png"
+  let binanceUsd = "assets/images/binance-usd.png"
+  let bitcoinCash = "assets/images/bitcoin-cash.png"
+  let chainlink = "assets/images/chainlink.png"
+  let cosmos = "assets/images/cosmos.png"
+  let dai = "assets/images/dai.png"
+  let ethereumClassic = "assets/images/ethereum-classic.png"
+  let internetComputer = "assets/images/internet-computer.png"
+  let leoToken = "assets/images/leo-token.png"
+  let litecoin = "assets/images/litecoin.png"
+  let maticNetwork = "assets/images/matic-network.png"
+  let monero = "assets/images/monero.png"
+  let okb = "assets/images/okb.png"
+  let polkadot = "assets/images/polkadot.png"
+  let shibaInu = "assets/images/shiba-inu.png"
+  let solana = "assets/images/solana.png"
+  let stellar = "assets/images/stellar.png"
+  let openNetwork = "assets/images/the-open-network.png"
+  let tron = "assets/images/tron.png"
+  let uniswap = "assets/images/uniswap.png"
+  let wrappedBitcoin = "assets/images/wrapped-bitcoin.png"
+
+  useEffect(() => {
+    if (coin[0].id === "bitcoin") {
+      setCryptoImage(bitcoin)
+    } else if (coin[0].id === "ethereum") {
+      setCryptoImage(ethereum)
+    } else if (coin[0].id === "tether") {
+      setCryptoImage(tether)
+    } else if (coin[0].id === "binancecoin") {
+      setCryptoImage(binancecoin)
+    } else if (coin[0].id === "cardano") {
+      setCryptoImage(cardano)
+    } else if (coin[0].id === "dogecoin") {
+      setCryptoImage(dogecoin)
+    } else if (coin[0].id === "ripple") {
+      setCryptoImage(ripple)
+    } else if (coin[0].id === "staked-ether") {
+      setCryptoImage(stakedEther)
+    } else if (coin[0].id === "usd-coin") {
+      setCryptoImage(usdCoin)
+    } else if (coin[0].id === "avalanche-2") {
+      setCryptoImage(avalanche2)
+    } else if (coin[0].id === "binance-usd") {
+      setCryptoImage(binanceUsd)
+    } else if (coin[0].id === "bitcoin-cash") {
+      setCryptoImage(bitcoinCash)
+    } else if (coin[0].id === "chainlink") {
+      setCryptoImage(chainlink)
+    } else if (coin[0].id === "cosmos") {
+      setCryptoImage(cosmos)
+    } else if (coin[0].id === "dai") {
+      setCryptoImage(dai)
+    } else if (coin[0].id === "ethereum-classic") {
+      setCryptoImage(ethereumClassic)
+    } else if (coin[0].id === "internet-computer") {
+      setCryptoImage(internetComputer)
+    } else if (coin[0].id === "leo-token") {
+      setCryptoImage(leoToken)
+    } else if (coin[0].id === "litecoin") {
+      setCryptoImage(litecoin)
+    } else if (coin[0].id === "matic-network") {
+      setCryptoImage(maticNetwork)
+    } else if (coin[0].id === "monero") {
+      setCryptoImage(monero)
+    } else if (coin[0].id === "okb") {
+      setCryptoImage(okb)
+    } else if (coin[0].id === "polkadot") {
+      setCryptoImage(polkadot)
+    } else if (coin[0].id === "shiba-inu") {
+      setCryptoImage(shibaInu)
+    } else if (coin[0].id === "solana") {
+      setCryptoImage(solana)
+    } else if (coin[0].id === "stellar") {
+      setCryptoImage(stellar)
+    } else if (coin[0].id === "the-open-network") {
+      setCryptoImage(openNetwork)
+    } else if (coin[0].id === "tron") {
+      setCryptoImage(tron)
+    } else if (coin[0].id === "uniswap") {
+      setCryptoImage(uniswap)
+    } else if (coin[0].id === "wrapped-bitcoin") {
+      setCryptoImage(wrappedBitcoin)
+    }
+  }, [coin[0].id, bitcoin, ethereum, tether, binancecoin, cardano, dogecoin, ripple, stakedEther, usdCoin, avalanche2, binanceUsd, bitcoinCash, chainlink, cosmos, dai, ethereumClassic, internetComputer, leoToken, litecoin, maticNetwork, monero, okb, polkadot, shibaInu, solana, stellar, openNetwork, tron, uniswap, wrappedBitcoin])
+
+
 
   return (
-    <div className="labelBar">
-        <h3 id="head">Future Functionality</h3>
-      <div className="card2">
-        <ul>
-          <li>Descriptions following click on Crypto card</li>
-          <li>Chart showing price change history</li>
-        </ul>
-      </div>
-      <div>
-        <h3 className="head">More info</h3>
-        {infoCards}
-      </div>
-    </div>
+        <div className="infoBack" onClick={e => console.log(e.target)} >
+          {/* Card itself, where the curved grey starts */}
+          <div className={isDarkMode ? "infoCardD" : "infoCardL"}>
+            <div className="logoContainer">
+              <div className="col-3">
+                <div className="imgContainer">
+                  <img src={cryptoImage} alt="crypto coin logo" className="cardImg"></img>
+                </div>
+                <div className="textContainer">
+                  <p className={isDarkMode ? "cryptoName textD" : "cryptoName textL"}>{coin[0].name}</p>
+                </div>
+              </div>
+            </div>
+            <div className="symbolContainer">
+              <p className={isDarkMode ? "symbolText textD" : "symbolText textL"}>{coin[0].symbol}</p>
+            </div>
+            <div className="priceContainer">
+              <p className={isDarkMode ? "priceText textD" : "priceText textL"}>formattedPrice</p>
+            </div>
+            <div className="changeContainer">
+              <p className={isDarkMode ? "changeText textD" : "changeText textL"}>24 hr Δ</p>
+              <p className={(coin[0].price_change_percentage_24h < 0) ? "negativeChange" : "positiveChange"}>{(coin[0].price_change_percentage_24h < 0) ? "▼" : "▲"} {coin[0].price_change_percentage_24h.toFixed(2)}%</p>
+            </div>
+          </div>
+        </div>
+
+
+
+
+    // <div className="labelBar">
+    //     <h3 id="head">Future Functionality</h3>
+    //   <div className="card2">
+    //     <ul>
+    //       <li>Descriptions following click on Crypto card</li>
+    //       <li>Chart showing price change history</li>
+    //     </ul>
+    //   </div>
+    //   <div>
+    //     <h3 className="head">More info</h3>
+    //   </div>
+    // </div>
   )
 };
 
