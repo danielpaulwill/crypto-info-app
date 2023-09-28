@@ -106,26 +106,27 @@ function CryptoInfo({ coin, isDarkMode}) {
         <div className="infoBack" onClick={e => console.log(e.target)} >
           {/* Card itself, where the curved grey starts */}
           <div className={isDarkMode ? "infoCardD" : "infoCardL"}>
-            <div className="logoContainer">
-              <div className="col-3">
-                <div className="imgContainer">
-                  <img src={cryptoImage} alt="crypto coin logo" className="cardImg"></img>
-                </div>
-                <div className="textContainer">
-                  <p className={isDarkMode ? "cryptoName textD" : "cryptoName textL"}>{coin[0].name}</p>
-                </div>
+            {/* <div className="row red">
+
+            </div> */}
+            <div className="infoLogo">
+              <div className="infoLogoContainer">
+                <img src={cryptoImage} alt="crypto coin logo" className="cardImg"></img>
               </div>
             </div>
-            <div className="symbolContainer">
-              <p className={isDarkMode ? "symbolText textD" : "symbolText textL"}>{coin[0].symbol}</p>
-            </div>
-            <div className="priceContainer">
+              <div className="infoTextContainer">
+                <p className={isDarkMode ? "cryptoName textD" : "cryptoName textL"}>{coin[0].name} TEST</p>
+              </div>
+              <div className="symbolContainer">
+                <p className={isDarkMode ? "symbolText textD" : "symbolText textL"}>{coin[0].symbol.toUpperCase()}</p>
+              </div>
+            {/* <div className="priceContainer">
               <p className={isDarkMode ? "priceText textD" : "priceText textL"}>formattedPrice</p>
             </div>
             <div className="changeContainer">
               <p className={isDarkMode ? "changeText textD" : "changeText textL"}>24 hr Δ</p>
               <p className={(coin[0].price_change_percentage_24h < 0) ? "negativeChange" : "positiveChange"}>{(coin[0].price_change_percentage_24h < 0) ? "▼" : "▲"} {coin[0].price_change_percentage_24h.toFixed(2)}%</p>
-            </div>
+            </div> */}
           </div>
         </div>
 

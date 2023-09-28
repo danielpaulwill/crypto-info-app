@@ -148,6 +148,30 @@
   /* background-color: red; */
 }
 
+.infoLogo {
+  width: 30%;
+  height: 130px;
+  /* background-color: red; */
+}
+
+.infoLogoContainer {
+  margin: 10px 0;
+  width: fit-content;
+  display: flex;
+  /* justify-content: left; */
+  /* position: relative; */
+}
+
+.infoTextContainer {
+  /* width: fit-content; */
+  /* text-align: center; */
+  /* margin: auto; */
+  /* margin-left: 10px; */
+  /* margin-top: -10px; */
+  display: flex;
+  background-color: red;
+}
+
 .imgContainer {
   margin: 10px 5px;
   width: 60px;
@@ -184,6 +208,7 @@
   align-items: center;
   position: relative;
   top: 30%;
+  background-color: green;
 }
 
 .priceContainer {
@@ -236,12 +261,13 @@
 }
 
 .cryptoName {
-  font-weight: lighter;
-  text-align: center;
+  /* font-weight: lighter; */
+  text-align: left;
   margin: 0 auto;
   /* overflow: visible; */
-  white-space: nowrap;
-  font-size: small;
+  /* white-space: nowrap; */
+  font-size: larger;
+  /* background-color: blue; */
 }
 
 .textD {
